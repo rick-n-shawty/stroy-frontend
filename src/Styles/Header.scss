@@ -1,0 +1,152 @@
+.main-header{
+    display: flex;
+    max-height: 10rem;
+    width: 100%;
+    flex-direction: row;
+    .left-section{
+        display: flex;
+        overflow: hidden;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        background-color: lightcoral;
+        img{
+            height: 100%;
+            object-fit: contain;
+        }
+        p{
+            flex-wrap: wrap;
+            margin-left: .5rem;
+        }
+    }
+    .right-section{
+        width: 50%;
+        overflow: hidden;
+        padding: 1rem;
+        background-color: yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button{
+            cursor: pointer;
+        }
+        button {
+          margin: .8rem;
+          padding: .9rem 1.9rem;
+          text-align: center;
+          text-transform: uppercase;
+          transition: 0.5s;
+          background-size: 200% auto;
+          color: white;
+          border-radius: 10px;
+          display: block;
+          border: 0px;
+          font-weight: 700;
+          box-shadow: 0px 0px 14px -7px #f09819;
+          background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+          cursor: pointer;
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+        }
+        
+        button:hover {
+          background-position: right center;
+          /* change the direction of the change here */
+          color: #fff;
+          text-decoration: none;
+        }
+        
+        button:active {
+          transform: scale(0.95);
+        }
+        
+        select {
+            font-size: 1rem;
+            padding: 0.5em 0.75em;
+            border: 1px solid #ccc;
+            border-radius: 0.25em;
+            appearance: none;
+            background-color: #fff;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="5"><path fill="%23ccc" d="M0 0l4 4 4-4z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 0.5em center;
+            }
+            
+            select:hover,
+            select:focus {
+            outline: none;
+            border-color: #0077cc;
+            box-shadow: 0 0 0 0.1875em rgba(0, 119, 204, 0.3);
+            }
+            
+            select option {
+            font-size: 1rem;
+            padding: 0.5em 0.75em;
+            background-color: #fff;
+            color: #333;
+            }
+              
+    }
+    @media (max-width: 900px) {
+        .left-section{
+            img{
+                height: 85%;
+            }
+        }
+        .right-section{
+            button{
+                padding: .7rem 1.7rem;
+                font-size: .8rem;
+                margin: .5rem
+            }
+        }
+    }
+    @media (max-width: 830px) {
+        .left-section{
+            img{
+                height: 85%;
+            }
+        }
+        .right-section{
+            button{
+                padding: .5rem 1rem ;
+                font-size: .7rem;
+                font-weight: 500;
+                margin: .5rem
+            }
+        }
+    }
+    @media (max-width: 700px) {
+        flex-direction: column;
+        width: 100%;
+        gap: .5rem;
+        height: 10rem;
+        align-items: flex-start;
+        .left-section{
+            height: 70%;
+            width: 100%;
+        }
+        .right-section{
+            height: 30%;
+            width: 100%;
+        }
+    }
+    @media (max-width: 450px) {
+        .right-section{
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            button{
+                padding: .3rem .8rem
+            }
+            
+            select{
+                padding: .5rem;
+                font-size: .8rem;
+            }
+            
+        }
+    }
+}
