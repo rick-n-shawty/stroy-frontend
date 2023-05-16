@@ -16,4 +16,8 @@ body {
   flex-direction: column;
   flex: 1;
   padding: 1rem;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }/*# sourceMappingURL=Main.css.map */

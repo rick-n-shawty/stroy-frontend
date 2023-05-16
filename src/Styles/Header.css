@@ -3,6 +3,143 @@
   max-height: 10rem;
   width: 100%;
   flex-direction: row;
+  background-color: rgb(180, 205, 90);
+}
+.main-header .hidden-price {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 1rem;
+  height: 12rem;
+  width: 20rem;
+  opacity: 0;
+  background-color: lightsalmon;
+  left: 40%;
+  top: 30%;
+}
+.main-header .hidden-price .notch {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 20;
+}
+.main-header .hidden-price .notch button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.main-header .hidden-price .notch button img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-height: 100%;
+}
+.main-header .hidden-price .main {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  width: 100%;
+}
+.main-header .hidden-price .main p {
+  flex-wrap: wrap;
+  margin: 0;
+}
+.main-header .hidden-price .main input {
+  margin-bottom: 0.5rem;
+  height: 2rem;
+}
+.main-header .hidden-price .main button {
+  cursor: pointer;
+  padding: 0.5rem;
+  color: white;
+  background-color: rgb(60, 151, 60);
+  border: none;
+}
+.main-header .hidden-price .main button:active {
+  opacity: 0.1;
+  transition: opacity 0.4s ease-in-out;
+}
+.main-header .hidden-price.active {
+  opacity: 1;
+  box-sizing: border-box;
+  transition: opacity 0.5s ease-in-out;
+}
+.main-header .hidden-contact {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 1rem;
+  height: 10rem;
+  width: 20rem;
+  opacity: 0;
+  background-color: lightsalmon;
+  left: 40%;
+  top: 30%;
+}
+.main-header .hidden-contact .notch {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 20;
+}
+.main-header .hidden-contact .notch button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.main-header .hidden-contact .notch button img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-height: 100%;
+}
+.main-header .hidden-contact .main {
+  display: flex;
+  flex-direction: column;
+}
+.main-header .hidden-contact .main p {
+  flex-wrap: wrap;
+  margin: 0;
+}
+.main-header .hidden-contact .main input {
+  margin-bottom: 0.5rem;
+  height: 2rem;
+  padding: 1rem;
+}
+.main-header .hidden-contact .main button {
+  cursor: pointer;
+  padding: 0.5rem;
+  color: white;
+  background-color: rgb(60, 151, 60);
+  border: none;
+}
+.main-header .hidden-contact .main button:active {
+  opacity: 0.1;
+  transition: opacity 0.4s ease-in-out;
+}
+.main-header .hidden-contact.active {
+  opacity: 1;
+  box-sizing: border-box;
+  transition: opacity 0.5s ease-in-out;
+}
+@media (max-width: 700px) {
+  .main-header .hidden-contact, .main-header .hidden-price {
+    left: 30%;
+  }
+}
+@media (max-width: 600px) {
+  .main-header .hidden-contact, .main-header .hidden-price {
+    left: 20%;
+  }
+}
+@media (max-width: 430px) {
+  .main-header .hidden-contact, .main-header .hidden-price {
+    left: 10%;
+  }
 }
 .main-header .left-section {
   display: flex;
@@ -11,7 +148,6 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  background-color: lightcoral;
 }
 .main-header .left-section img {
   height: 100%;
@@ -26,7 +162,6 @@
   width: 50%;
   overflow: hidden;
   padding: 1rem;
-  background-color: yellow;
   display: flex;
   align-items: center;
   justify-content: center;
