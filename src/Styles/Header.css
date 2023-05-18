@@ -1,6 +1,6 @@
 .main-header {
   display: flex;
-  max-height: 10rem;
+  height: 10rem;
   width: 100%;
   position: relative;
   flex-direction: row;
@@ -31,6 +31,8 @@
   cursor: pointer;
 }
 .main-header .hidden-contact .notch button img {
+  height: 100%;
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -139,17 +141,19 @@
 .main-header .left-section {
   display: flex;
   overflow: hidden;
+  height: 100%;
   width: 50%;
   align-items: center;
   justify-content: center;
   padding: 1rem;
 }
 .main-header .left-section img {
-  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  height: 100%;
 }
 .main-header .left-section p {
+  width: 80%;
   flex-wrap: wrap;
   margin-left: 0.5rem;
 }
