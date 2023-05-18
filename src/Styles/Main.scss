@@ -22,7 +22,7 @@ body{
 .main-section{
     display: flex;
     flex-direction: column;
-    background-color: lightblue;
+    // background-color: lightblue;
     section{
         flex: 1;
     }
@@ -43,14 +43,14 @@ body{
                 .text{
                     display: flex;
                     flex-direction: column;
+                    p{
+                        max-width: 80%  ;
+                        flex-wrap: wrap;
+                    }
                 }
                 img{
                     object-fit: contain;
                     max-height: 40%;
-                }
-                p{
-                    max-width: 80%  ;
-                    flex-wrap: wrap;
                 }
             }
         }
@@ -61,6 +61,12 @@ body{
             margin-top: 2rem;
             button{
                 cursor: pointer;
+                outline: none;
+                border: none;
+                padding: 1rem;
+                background-color: green;
+                border-radius: 4px;
+                color: white;
             }
         }
         @media (max-width: 800px) {
@@ -72,11 +78,15 @@ body{
                 div{
                     height: 10rem;
                     width: 80%;
-                    background-color: pink;
+                    // background-color: pink;
                     flex-direction: row;
                     .text{
                         align-items: flex-start;
                         h3{
+                            margin: 0;
+                        }
+                        p{
+                            width: 100%;
                             margin: 0;
                         }
                     }
@@ -88,6 +98,125 @@ body{
             }
         }
   
+    }
+    .risk-section{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        .top{
+            display: flex;
+            justify-content: center;
+        }
+        .bottom{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 1rem;
+            .card{
+                display: flex;
+                flex-direction: column;
+                .notch{
+                    display: flex;
+                    align-items: center;
+                    img{
+                        object-fit: contain;
+                        height: 3rem;
+                    }
+                }
+            }
+            @media (max-width: 600px) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    }
+    .review-section{
+        display: flex;
+        flex-direction: column;
+     
+        .bg-image{
+            background-image: url('../Images/bg-image.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+        }
+        .top{
+            display: flex;
+            flex-direction: column;
+            color: white;
+            // align-items: center;
+            width: 100%;
+            padding: 1rem;
+            h1{
+                margin-bottom: 0;
+            }
+        }
+        .bottom{
+            display: grid;
+            padding: 2rem;
+            grid-template-columns: repeat(2, minmax(200px, 1fr));
+            gap: 1rem;
+            row-gap: 3rem;
+            .video-frame{
+                height: 25rem;
+            }
+            @media (max-width: 960px) {
+                .video-frame{
+                    height: 20rem;
+                }
+            }
+            @media (max-width: 742px) {
+                .video-frame{
+                    height: 17rem;
+                }
+            }
+            @media (max-width: 600px) {
+                grid-template-columns: 1fr;
+                .video-frame{
+                    height: 15rem;
+                }
+            }
+        }
+    }
+    .certificate-section{
+        display: flex;
+        padding: 1rem;
+        flex-direction: column;
+   
+        .top{
+            display: flex;
+            justify-content: center;
+        }
+        .bottom{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            .certificate-img{
+                width: 50%;
+                object-fit: contain;
+            }
+            .text-cards{
+                display: flex;
+                flex-direction: column;
+                .card{
+                    .notch{
+                        display: flex;
+                        align-items: center;
+                        gap: .8rem;
+                    }
+                    p{
+                        flex-wrap: wrap;
+                        max-width: 80%;
+                    }
+                }
+            }
+        }
+        @media (max-width: 750px) {
+            .bottom{
+                flex-direction: column;
+            }
+        }
     }
 }
 .material-symbols-outlined {

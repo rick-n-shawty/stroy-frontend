@@ -24,7 +24,6 @@ body {
 .main-section {
   display: flex;
   flex-direction: column;
-  background-color: lightblue;
 }
 .main-section section {
   flex: 1;
@@ -50,14 +49,14 @@ body {
   display: flex;
   flex-direction: column;
 }
+.main-section .banner-section .perk-list div .text p {
+  max-width: 80%;
+  flex-wrap: wrap;
+}
 .main-section .banner-section .perk-list div img {
   -o-object-fit: contain;
      object-fit: contain;
   max-height: 40%;
-}
-.main-section .banner-section .perk-list div p {
-  max-width: 80%;
-  flex-wrap: wrap;
 }
 .main-section .banner-section .calc-link {
   display: flex;
@@ -67,6 +66,12 @@ body {
 }
 .main-section .banner-section .calc-link button {
   cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  background-color: green;
+  border-radius: 4px;
+  color: white;
 }
 @media (max-width: 800px) {
   .main-section .banner-section .perk-list {
@@ -78,7 +83,6 @@ body {
   .main-section .banner-section .perk-list div {
     height: 10rem;
     width: 80%;
-    background-color: pink;
     flex-direction: row;
   }
   .main-section .banner-section .perk-list div .text {
@@ -87,10 +91,133 @@ body {
   .main-section .banner-section .perk-list div .text h3 {
     margin: 0;
   }
+  .main-section .banner-section .perk-list div .text p {
+    width: 100%;
+    margin: 0;
+  }
   .main-section .banner-section .perk-list div img {
     -o-object-fit: contain;
        object-fit: contain;
     margin-right: 1rem;
+  }
+}
+.main-section .risk-section {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.main-section .risk-section .top {
+  display: flex;
+  justify-content: center;
+}
+.main-section .risk-section .bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.main-section .risk-section .bottom .card {
+  display: flex;
+  flex-direction: column;
+}
+.main-section .risk-section .bottom .card .notch {
+  display: flex;
+  align-items: center;
+}
+.main-section .risk-section .bottom .card .notch img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 3rem;
+}
+@media (max-width: 600px) {
+  .main-section .risk-section .bottom {
+    grid-template-columns: 1fr;
+  }
+}
+.main-section .review-section {
+  display: flex;
+  flex-direction: column;
+}
+.main-section .review-section .bg-image {
+  background-image: url("../Images/bg-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.main-section .review-section .top {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 100%;
+  padding: 1rem;
+}
+.main-section .review-section .top h1 {
+  margin-bottom: 0;
+}
+.main-section .review-section .bottom {
+  display: grid;
+  padding: 2rem;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 1rem;
+  row-gap: 3rem;
+}
+.main-section .review-section .bottom .video-frame {
+  height: 25rem;
+}
+@media (max-width: 960px) {
+  .main-section .review-section .bottom .video-frame {
+    height: 20rem;
+  }
+}
+@media (max-width: 742px) {
+  .main-section .review-section .bottom .video-frame {
+    height: 17rem;
+  }
+}
+@media (max-width: 600px) {
+  .main-section .review-section .bottom {
+    grid-template-columns: 1fr;
+  }
+  .main-section .review-section .bottom .video-frame {
+    height: 15rem;
+  }
+}
+.main-section .certificate-section {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+}
+.main-section .certificate-section .top {
+  display: flex;
+  justify-content: center;
+}
+.main-section .certificate-section .bottom {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.main-section .certificate-section .bottom .certificate-img {
+  width: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.main-section .certificate-section .bottom .text-cards {
+  display: flex;
+  flex-direction: column;
+}
+.main-section .certificate-section .bottom .text-cards .card .notch {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.main-section .certificate-section .bottom .text-cards .card p {
+  flex-wrap: wrap;
+  max-width: 80%;
+}
+@media (max-width: 750px) {
+  .main-section .certificate-section .bottom {
+    flex-direction: column;
   }
 }
 
