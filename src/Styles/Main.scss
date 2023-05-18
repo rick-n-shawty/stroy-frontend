@@ -18,14 +18,13 @@ body{
     flex: 1;
     overflow-x: hidden;
 }
+
 .main-section{
     display: flex;
     flex-direction: column;
     background-color: lightblue;
     section{
         flex: 1;
-        width: 100%;
-        position: relative;
     }
     .banner-section{
         display: flex;
@@ -33,25 +32,64 @@ body{
         padding: 1rem;
         .perk-list{
             display: flex;
-            background-color: blue;
-            gap: 1rem;
-            justify-content: center;
+            min-height: 30rem;
+            justify-content: space-around;
             div{
                 display: flex;
-                width: 30%;
                 flex-direction: column;
                 align-items: center;
-                background-color: red;
+                justify-content: center;
+                height: 30rem;
+                .text{
+                    display: flex;
+                    flex-direction: column;
+                }
                 img{
                     object-fit: contain;
-                    height: 10%;
+                    max-height: 40%;
+                }
+                p{
+                    max-width: 80%  ;
+                    flex-wrap: wrap;
                 }
             }
         }
+        .calc-link{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            button{
+                cursor: pointer;
+            }
+        }
+        @media (max-width: 800px) {
+            .perk-list{
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                gap: .5rem;
+                div{
+                    height: 10rem;
+                    width: 80%;
+                    background-color: pink;
+                    flex-direction: row;
+                    .text{
+                        align-items: flex-start;
+                        h3{
+                            margin: 0;
+                        }
+                    }
+                    img{
+                        object-fit: contain;
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+  
     }
 }
-
-
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,

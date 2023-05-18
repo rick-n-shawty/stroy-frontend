@@ -16,6 +16,8 @@ export default function Header(){
         }
     }
     const togglePrice = (e) => {
+        const root = document.getElementById('root')
+        console.log(root)
         if(isContactActive == true){
             setContactActive(false)
         }

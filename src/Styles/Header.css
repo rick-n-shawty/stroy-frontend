@@ -17,6 +17,7 @@
   box-sizing: border-box;
   height: 260px;
   width: 320px;
+  z-index: 21;
   left: 40%;
   top: 110%;
 }
@@ -65,6 +66,7 @@
 .main-header .hidden-price {
   opacity: 0;
   display: flex;
+  z-index: 21;
   visibility: hidden;
   flex-direction: column;
   background-color: #2F3C7E;

@@ -1,4 +1,9 @@
+import React from 'react'; 
+import {Link} from 'react-router-dom';
+import {LanguageContext} from '../App';
+import {useState, useContext} from 'react';
 export default function Main(){
+    const [rus, setRus] = useContext(LanguageContext)
     return (
         <main className="main-section">
             <section className="banner-section">
@@ -7,23 +12,52 @@ export default function Main(){
                 <div className="perk-list">
                     <div>
                         <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Wallet_Flat_Icon.svg/1024px-Wallet_Flat_Icon.svg.png?20180301073008'></img>
-                        <h3>No money</h3>
-                        <p>dadjkajdajdkajdlajdlj</p>
+                        <div className='text'>
+                            <h3>No money</h3>
+                            <p>Оплачивайте работу только после выполнения и проверки качества</p>
+                        </div>
                     </div>
                     <div>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Circle-icons-document.svg/2048px-Circle-icons-document.svg.png"></img>
-                        <h3>Insurance 100%</h3>
-                        <p>dahdjhajkdhakdhjadhkahdk</p>
+                        <div className='text'>
+                            <h3>Insurance 100%</h3>
+                            <p>
+                            Фиксированная смета и официальный договор с гарантией 5 лет
+                            </p>
+                        </div>
                     </div>
                     <div>
                         <img src="https://www.pngrepo.com/png/191856/512/alarm-clock-clock.png"></img>
-                        <h3>We will get it done on time</h3>
-                        <p>dnakjdnkajndkajndjand</p>
+                        <div className='text'>
+                            <h3>We will get it done on time</h3>
+                            <p>Держим сроки или платим неустойку 1% за каждый день просрочки</p>
+                        </div>
                     </div>
                 </div>
-                <div className="calc-link"></div>
+                <div className="calc-link">
+                    <button>Find out price</button>
+                </div>
             </section>
-            <section className="risk-section"></section>
+            <section className="risk-section">
+                <div className="top">
+
+                </div>
+                <div className="bottom">
+                    <div className="card">
+                    Нарваться на неопытных мастеров, которые сделали ремонт у себя дома и теперь считают себя супер профессионалами. Обещают сделать "евро" ремонт недорого, но не имеют представления о СНиП, стандартах и делают всю работу с помощью молотка и отвертки
+                    </div>
+                    <div className='card'>
+                    Нарваться на неопытных мастеров, которые сделали ремонт у себя дома и теперь считают себя супер профессионалами. Обещают сделать "евро" ремонт недорого, но не имеют представления о СНиП, стандартах и делают всю работу с помощью молотка и отвертки
+                    </div>
+                    <div className='card'>
+                    Нарваться на неопытных мастеров, которые сделали ремонт у себя дома и теперь считают себя супер профессионалами. Обещают сделать "евро" ремонт недорого, но не имеют представления о СНиП, стандартах и делают всю работу с помощью молотка и отвертки
+                    </div>
+                    <div className='card'>
+                    Нарваться на неопытных мастеров, которые сделали ремонт у себя дома и теперь считают себя супер профессионалами. Обещают сделать "евро" ремонт недорого, но не имеют представления о СНиП, стандартах и делают всю работу с помощью молотка и отвертки
+                    </div>
+                </div>
+            </section>
+
             <section className="certificate-section"></section>
             <section className="review-section"></section>
             <section className="team-section"></section>
