@@ -52,12 +52,12 @@ export default function Header(){
             console.log(err)
         }
     }
-    const closeWindown = (e) => {
-        if(e.target.id === 'price-btn'){
-            setPriceActive(false)
-            console.log(false)
-        }else if(e.target.id === 'contact-btn'){
+
+    const closeWindow = (e) => {
+        if(e.target.id === 'contact-btn'){
             setContactActive(false)
+        }else if(e.target.id === 'price-btn'){
+            setPriceActive(false)
         }
     }
     return(
@@ -66,8 +66,8 @@ export default function Header(){
             <div className="left-section">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Wikimedia-logo.png"></img>
                 <p>
-                    { rus ? "Делаем качественный ремонт квартир 'под ключ' в Санкт Петербурге, без предоплаты, c гарантией в договоре 5 лет" : 
-                    "Biz Sankt-Peterburgda yuqori sifatli kalit taslim bo'lgan kvartirani oldindan to'lovsiz, shartnomada 5 yil kafolat bilan ta'mirlaymiz." }</p>
+                    { rus ? "Делаем качественный ремонт квартир 'под ключ', без предоплаты, c гарантией в договоре 5 лет" : 
+                    "Biz Toshkentda yuqori sifatli kalit taslim bo'lgan kvartirani oldindan to'lovsiz, shartnomada 5 yil kafolat bilan ta'mirlaymiz." }</p>
             </div>
             <div className="right-section">
                 <button id="price-button" className={isPriceActive ? "price-btn active" : "price-btn"} onClick={togglePrice}>
@@ -82,27 +82,32 @@ export default function Header(){
                 </select>
             </div>
 
+
+
             <div className={isPriceActive ? "hidden-price active" : "hidden-price"}>
                 <div className="notch">
-                    <button id="price-btn" onClick={closeWindown}><img id="price-btn" src={closeIcon}></img></button>
+                    <button id="price-btn" onClick={closeWindow}><img id="price-btn" src={closeIcon}></img></button>
                 </div>
                 <div className="main">
-                    <p>Отправим 3 варианта сметы, выполненных нами объектов + подробный прайс, актуальный на 2023 год</p>
-                    <input onChange={(e) => setPhoneNum(e.target.value)} value={phoneNum} placeholder="Номер:"/>
-                    <button onClick={sendPriceRequest}>Готово</button>
+                    <p>{rus ? "Отправим 3 варианта сметы, выполненных нами объектов + подробный прайс, актуальный на 2023 год" : 
+                    "Biz tugatgan ob'ektlarni baholash uchun 3 ta variantni + 2023 yilga tegishli batafsil narxlar ro'yxatini yuboramiz."}</p>
+                    <input placeholder={rus? "Номер" : "Raqam"} onChange={(e) => setPhoneNum(e.target.value)} value={phoneNum}/>
+                    <button onClick={sendPriceRequest}>{rus ? "Готово" : "Tayyor"}</button>
                 </div>
             </div>
 
             <div className={isContactActive ? "hidden-contact active" : "hidden-contact"}>
                 <div className="notch">
-                    <button id="contact-btn" onClick={closeWindown}><img id="contact-btn" src={closeIcon}></img></button>
+                    <button id="contact-btn" onClick={closeWindow}><img id="contact-btn" src={closeIcon}></img></button>
                 </div>
                 <div className="main">
-                    <p>Получите консультацию от профессионала</p>
-                    <input placeholder="Номер" onChange={(e) => setPhoneNum(e.target.value)} value={phoneNum}/>
-                    <button onClick={sendContactRequest}>Связаться с прорабом</button>
+                    <p>{ rus ? "Получите консультацию от профессионала" : "Professionaldan maslahat oling"}</p>
+                    <input placeholder={rus? "Номер" : "Raqam"} onChange={(e) => setPhoneNum(e.target.value)} value={phoneNum}/>
+                    <button onClick={sendContactRequest}>{rus ? "Связаться с прорабом" : "Ustaga murojaat qiling"}</button>
                 </div>
             </div>
+
+
         </header>
       </>
     )
