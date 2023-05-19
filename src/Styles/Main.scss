@@ -321,15 +321,18 @@ body{
                         padding: 1rem;
                         height: 30%;
                         width: 100%;
-                        // align-items: center;
-                        background-color: blue;
-                        // flex
-                        img{
-                            flex-grow: 1;
-                            width: auto;
-                            height: auto;
-                            max-width: 100%;
-                            max-height: 100%;
+                        align-items: center;
+                        justify-content: space-around;
+                        background-color: blue; 
+                        overflow: hidden;
+                        div{
+                            display: flex;
+                            flex: 1 1 auto;
+                            img{
+                                object-fit: contain;
+                                // max-height: 100%;
+                                max-width: 100%;
+                            }
                         }
                     }
 
