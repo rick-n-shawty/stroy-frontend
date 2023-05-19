@@ -284,36 +284,61 @@ body{
             padding: 2rem;
             .portfolio-card{
                 display: flex;
-                justify-content: center;
+                // justify-content: center;
+                align-items: center;
+                height: 40rem;
                 width: 100%;
+                background-color: lightcoral;
+
+
                 .image-container{
                     display: flex;
+                    // background-color: red;
                     flex-direction: column;
                     width: 50%;
                     height: 100%;
+                    overflow: hidden;
                     .main-image{
-                        height: 80%;
+                        height: 70%;
+                        background-color: red;
                         width: 100%;
-                        img{
-                            object-fit: contain;
+                        .swiper{
+                            height: 100%;
                             max-width: 100%;
-                            max-height: 100%;
+                            .swiper-wrapper{
+                                height: 100%;
+                                max-width: 100%;
+                                img{
+                                    width: 100%;
+                                    height: auto;
+                                    object-fit: contain;
+                                }
+                            }
                         }
                     }
                     .sub-images{
                         display: flex;
+                        padding: 1rem;
+                        height: 30%;
                         width: 100%;
-                        height: 20%;
-                        background-color: red;
+                        // align-items: center;
+                        background-color: blue;
+                        // flex
                         img{
-                            object-fit: contain;
-                            height: 100%;
+                            flex-grow: 1;
+                            width: auto;
+                            height: auto;
+                            max-width: 100%;
+                            max-height: 100%;
                         }
                     }
+
                 }
                 .text-container{
                     display: flex;
                     flex-direction: column;
+                    align-items: flex-start;
+                    padding: 1rem;
                 }
             }
         }

@@ -293,39 +293,56 @@ body {
 }
 .main-section .portfolio-section .bottom .portfolio-card {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  height: 40rem;
   width: 100%;
+  background-color: lightcoral;
 }
 .main-section .portfolio-section .bottom .portfolio-card .image-container {
   display: flex;
   flex-direction: column;
   width: 50%;
   height: 100%;
+  overflow: hidden;
 }
 .main-section .portfolio-section .bottom .portfolio-card .image-container .main-image {
-  height: 80%;
+  height: 70%;
+  background-color: red;
   width: 100%;
 }
-.main-section .portfolio-section .bottom .portfolio-card .image-container .main-image img {
+.main-section .portfolio-section .bottom .portfolio-card .image-container .main-image .swiper {
+  height: 100%;
+  max-width: 100%;
+}
+.main-section .portfolio-section .bottom .portfolio-card .image-container .main-image .swiper .swiper-wrapper {
+  height: 100%;
+  max-width: 100%;
+}
+.main-section .portfolio-section .bottom .portfolio-card .image-container .main-image .swiper .swiper-wrapper img {
+  width: 100%;
+  height: auto;
   -o-object-fit: contain;
      object-fit: contain;
-  max-width: 100%;
-  max-height: 100%;
 }
 .main-section .portfolio-section .bottom .portfolio-card .image-container .sub-images {
   display: flex;
+  padding: 1rem;
+  height: 30%;
   width: 100%;
-  height: 20%;
-  background-color: red;
+  background-color: blue;
 }
 .main-section .portfolio-section .bottom .portfolio-card .image-container .sub-images img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  height: 100%;
+  flex-grow: 1;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 .main-section .portfolio-section .bottom .portfolio-card .text-container {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
 }
 
 .material-symbols-outlined {
