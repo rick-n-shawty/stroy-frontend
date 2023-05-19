@@ -220,6 +220,113 @@ body {
     flex-direction: column;
   }
 }
+.main-section .team-section {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.main-section .team-section .emp-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+.main-section .team-section .emp-card img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.main-section .team-section .emp-card .bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-section .team-section .emp-card .bottom h2 {
+  margin: 0;
+  flex-wrap: wrap;
+}
+.main-section .team-section .emp-card .bottom p {
+  margin: 0;
+  flex-wrap: wrap;
+}
+.main-section .team-section .top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-section .team-section .top h2 {
+  margin-top: 0;
+  flex-wrap: wrap;
+  max-width: 70%;
+}
+.main-section .team-section .bottom {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 1000px) {
+  .main-section .team-section .bottom {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 730px) {
+  .main-section .team-section .bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .main-section .team-section {
+    display: none;
+  }
+}
+.main-section .portfolio-section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 1rem;
+  background-color: lightblue;
+}
+.main-section .portfolio-section .bottom {
+  padding: 2rem;
+}
+.main-section .portfolio-section .bottom .portfolio-card {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.main-section .portfolio-section .bottom .portfolio-card .image-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+.main-section .portfolio-section .bottom .portfolio-card .image-container .main-image {
+  height: 80%;
+  width: 100%;
+}
+.main-section .portfolio-section .bottom .portfolio-card .image-container .main-image img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+.main-section .portfolio-section .bottom .portfolio-card .image-container .sub-images {
+  display: flex;
+  width: 100%;
+  height: 20%;
+  background-color: red;
+}
+.main-section .portfolio-section .bottom .portfolio-card .image-container .sub-images img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+}
+.main-section .portfolio-section .bottom .portfolio-card .text-container {
+  display: flex;
+  flex-direction: column;
+}
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;

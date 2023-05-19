@@ -2,10 +2,25 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {LanguageContext} from '../App';
 import {useState, useEffect, useContext} from 'react';
+import EmployeeCard from './EmployeeCard';
 import axios from 'axios';
+
+
+
+import {Swiper, useSwiper, SwiperSlide} from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
+// import 'swiper/css/scrollbar';
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.css"
+
+import PortfolioCard from './PortfolioCard';
+
 export default function Main(){
     const [rus, setRus] = useContext(LanguageContext)
     const [videos, setVideos] = useState([])
+    const [workers, setWorkers] = useState([])
     useEffect(() => {
         const fetchData = async () => {
             try{
@@ -22,7 +37,20 @@ export default function Main(){
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowFullscreen></iframe>
                 })
-                console.log(arr)
+                const workerRes = await axios.get('/employee')
+                const workersArr = await workerRes.data.employees
+                const workerCards = workersArr.map(item => {
+                    return <EmployeeCard 
+                    key={item._id} 
+                    name={item.name} 
+                    position={item.position}
+                    picture={item.picture}
+                    exp={item.experience}
+                    desc={item.description}
+                    />
+                })
+                setWorkers(workerCards)
+                console.log(workersArr)
                 setVideos(arr)
             }catch(err){
                 console.log(err)
@@ -143,8 +171,39 @@ export default function Main(){
                     </div>
                 </div>
             </section>
-            <section className="team-section"></section>
-            <section className="portfolio-section"></section>
+            <section className="team-section">
+                <div className='top'>
+                    <h1> КТО БУДЕТ  ДЕЛАТЬ РЕМОНТ?</h1>
+                    <h2>Только проверенные, адекватные специалисты с реальным опытом и профессиональным инструментом. Всегда трезвые, соблюдают дисциплину и аккуратно относятся к вашему имуществу</h2>
+                </div>
+                <div className='bottom'>
+                    {workers}
+                </div>
+            </section>
+
+            <section className="portfolio-section">
+                <div className='top'></div>
+
+
+                <div className='bottom'>
+                    <Swiper
+                        modules={[Navigation]}
+                        spaceBetween={50}
+                        slidesPerView={1}
+                        navigation
+                        // scrollbar={{draggable: true}}
+                        // pagination={{clickable: true}}
+                        onSlideChange={() => console.log('slide change')}
+                        onSwiper={(swiper) => console.log(swiper)}>
+                        <SwiperSlide>
+                            <PortfolioCard/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <PortfolioCard/>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
+            </section>
             <section className="calc-section"></section>
         </main>
     )
