@@ -4,7 +4,7 @@ import {LanguageContext} from '../App';
 import {useState, useEffect, useContext} from 'react';
 import EmployeeCard from './EmployeeCard';
 import axios from 'axios';
-
+import closeIcon from '../Images/close-icon.svg'
 
 
 import {Swiper, useSwiper, SwiperSlide} from 'swiper/react';
@@ -182,7 +182,9 @@ export default function Main(){
             </section>
 
             <section className="portfolio-section">
-                <div className='top'></div>
+                <div className='top'>
+                    <h1>НЕКОТОРЫЕ НАШИ РАБОТЫ</h1>
+                </div>
 
 
                 <div className='bottom'>
@@ -204,7 +206,120 @@ export default function Main(){
                     </Swiper>
                 </div>
             </section>
-            <section className="calc-section"></section>
+
+            <section className="calc-section">
+                <div className='top'>
+                    <h1>ПРИМЕРНЫЙ РАСЧЁТ СТОИМОСТИ РЕМОНТА</h1>
+                </div>
+                <div className='bottom'>
+                    <div className='container'>
+                        <div className='input-box'>
+                            <h3>Площадь квартиры, м2</h3>
+                            <input placeholder='50' type='number'/>
+                        </div>
+                        <div className='check-boxes'>
+                            <div className='condition'>
+                                <h3>Состояние квартиры</h3>
+                                <label class="radio-container">
+                                    <input type="radio" name="radio-cond"/>
+                                    <span class="checkmark"></span>
+                                    Вторичка со старым ремонтом
+                                </label>   
+                                <label class="radio-container">
+                                    <input type="radio" name="radio-cond"/>
+                                    <span class="checkmark"></span>
+                                    Вторичка со старым ремонтом
+                                </label>   
+                                <label class="radio-container">
+                                    <input type="radio" name="radio-cond"/>
+                                    <span class="checkmark"></span>
+                                    Вторичка со старым ремонтом
+                                </label>   
+                                <label class="radio-container">
+                                    <input type="radio" name="radio-cond"/>
+                                    <span class="checkmark"></span>
+                                    Вторичка со старым ремонтом
+                                </label>   
+                            </div>
+                            <div className='type'>
+                                <h3>Тип ремонта</h3>
+                                <label class="radio-container">
+                                    <input type="radio" name="radio-type"/>
+                                    <span class="checkmark"></span>
+                                    Черновая отделка
+                                </label>                
+                                <label class="radio-container">
+                                    <input type="radio" name="radio-type"/>
+                                    <span class="checkmark"></span>
+                                    Черновая отделка
+                                </label>                
+                                <label class="radio-container">
+                                    <input type="radio" name="radio-type"/>
+                                    <span class="checkmark"></span>
+                                    Черновая отделка
+                                </label>                
+                                <label class="radio-container">
+                                    <input type="radio" name="radio-type"/>
+                                    <span class="checkmark"></span>
+                                    Черновая отделка
+                                </label>                
+                            </div>
+                        </div>
+                        <div className='total-output'>
+                            <div className='box standard'>
+                                <div className='name'>Стандарт</div>
+                                <div className='price'>51000</div>
+                            </div>
+                            <div className='box comfort'>
+                                <div className='name'>Комфорт</div>
+                                <div className='price'>215000</div>
+                            </div>
+                            <div className='box premium'>
+                                <div className='name'>Премиум</div>
+                                <div className='price'>252000</div>
+                            </div>
+                        </div>
+                        <div className='buttons'>
+                            <button>Расчитать по подробнее</button>
+                            <button>Записаться на размер</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className='excursion-section'>
+                <div className='hidden-window'>
+                    <div className='notch'>
+                        <h3>Экскурсия по объектам</h3>
+                        <div className='close-btn'>
+                            <button>
+                                <img src={closeIcon}></img>
+                            </button>
+                        </div>
+                    </div>
+                    <div className='form'>
+                        <div class="form-group">
+                            <p>Name</p>
+                            <input type="text"/>
+                        </div>
+                        <div class="form-group">
+                            <p>Phone</p>
+                            <input type="text"/>
+                        </div>
+                        <button>Sign up</button>
+                    </div>
+                </div>
+                <div className='wrapper'>
+                    <div className='padding'></div>
+                    <div className='content'>
+                        <h2>НЕ ВЕРЬТЕ НА СЛОВО, УБЕДИТЕСЬ ЛИЧНО!</h2>
+                        <h3>Посетите наши текущие объекты, пообщайтесь с клиентами и убедитесь в качестве услуг</h3>
+                        <div className='btn-container'>
+                            <button>Записаться на экскурсию</button>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
         </main>
     )
 }

@@ -17,13 +17,15 @@ export default function Header(){
     }
     const togglePrice = (e) => {
         const root = document.getElementById('root')
-        console.log(root)
+        root.setAttribute('class', 'overlay')
         if(isContactActive == true){
             setContactActive(false)
         }
         setPriceActive(true)
     }
     const toggleContact = (e) => {
+        const root = document.getElementById('root')
+        root.setAttribute('class', 'overlay')
         if(isPriceActive === true){
             setPriceActive(false)
         }
@@ -56,6 +58,8 @@ export default function Header(){
     }
 
     const closeWindow = (e) => {
+        const root = document.getElementById('root')
+        root.removeAttribute('class')
         if(e.target.id === 'contact-btn'){
             setContactActive(false)
         }else if(e.target.id === 'price-btn'){

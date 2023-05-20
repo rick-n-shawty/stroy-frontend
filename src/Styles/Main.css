@@ -19,6 +19,11 @@ body {
   flex-direction: column;
   flex: 1;
   overflow-x: hidden;
+  z-index: 999;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.353);
 }
 
 .main-section {
@@ -286,17 +291,20 @@ body {
   flex-direction: column;
   position: relative;
   padding: 1rem;
-  background-color: lightblue;
+}
+.main-section .portfolio-section .top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .main-section .portfolio-section .bottom {
-  padding: 2rem;
+  padding: 1rem;
 }
 .main-section .portfolio-section .bottom .portfolio-card {
   display: flex;
   align-items: center;
   height: 40rem;
   width: 100%;
-  background-color: lightcoral;
 }
 .main-section .portfolio-section .bottom .portfolio-card .image-container {
   display: flex;
@@ -307,7 +315,6 @@ body {
 }
 .main-section .portfolio-section .bottom .portfolio-card .image-container .main-image {
   height: 70%;
-  background-color: red;
   width: 100%;
 }
 .main-section .portfolio-section .bottom .portfolio-card .image-container .main-image .swiper {
@@ -320,7 +327,7 @@ body {
 }
 .main-section .portfolio-section .bottom .portfolio-card .image-container .main-image .swiper .swiper-wrapper img {
   width: 100%;
-  height: auto;
+  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -331,23 +338,432 @@ body {
   width: 100%;
   align-items: center;
   justify-content: space-around;
-  background-color: blue;
   overflow: hidden;
+  gap: 0.5rem;
 }
 .main-section .portfolio-section .bottom .portfolio-card .image-container .sub-images div {
   display: flex;
   flex: 1 1 auto;
 }
 .main-section .portfolio-section .bottom .portfolio-card .image-container .sub-images div img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 100%;
   max-width: 100%;
+  border-radius: 8px;
 }
 .main-section .portfolio-section .bottom .portfolio-card .text-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  height: 100%;
   padding: 1rem;
+  width: 50%;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.main-section .portfolio-section .bottom .portfolio-card .text-container .texts {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  overflow-wrap: break-word;
+}
+.main-section .portfolio-section .bottom .portfolio-card .text-container .texts h1 {
+  margin: 0;
+  height: 20%;
+}
+.main-section .portfolio-section .bottom .portfolio-card .text-container .texts p {
+  margin: 0;
+  flex-wrap: wrap;
+  word-break: break-all;
+  overflow: hidden;
+  max-height: 80%;
+}
+.main-section .portfolio-section .bottom .portfolio-card .text-container .space {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main-section .portfolio-section .bottom .portfolio-card .text-container .space p {
+  font-weight: 700;
+}
+.main-section .portfolio-section .bottom .portfolio-card .text-container .space img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 50%;
+}
+.main-section .portfolio-section .bottom .portfolio-card .text-container .price {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main-section .portfolio-section .bottom .portfolio-card .text-container .price p {
+  font-weight: 700;
+}
+.main-section .portfolio-section .bottom .portfolio-card .text-container .price img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 50%;
+}
+.main-section .portfolio-section .bottom .portfolio-card .text-container .btn-div {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.main-section .portfolio-section .bottom .portfolio-card .text-container .btn-div button {
+  padding: 1rem;
+  cursor: pointer;
+  background-color: yellow;
+  border: none;
+  color: black;
+}
+.main-section .portfolio-section .bottom .portfolio-card .text-container .btn-div button:hover {
+  opacity: 0.9;
+}
+@media (max-width: 1285px) {
+  .main-section .portfolio-section .bottom .portfolio-card {
+    height: 35rem;
+  }
+}
+@media (max-width: 1000px) {
+  .main-section .portfolio-section .bottom .portfolio-card {
+    height: 30rem;
+  }
+}
+@media (max-width: 900px) {
+  .main-section .portfolio-section .bottom .portfolio-card {
+    height: 25rem;
+  }
+}
+@media (max-width: 800px) {
+  .main-section .portfolio-section .bottom .portfolio-card {
+    flex-direction: column;
+    height: 40rem;
+  }
+  .main-section .portfolio-section .bottom .portfolio-card .image-container {
+    width: 100%;
+    height: 60%;
+  }
+  .main-section .portfolio-section .bottom .portfolio-card .image-container .main-image {
+    height: 100%;
+    width: 100%;
+  }
+  .main-section .portfolio-section .bottom .portfolio-card .image-container .main-image .swiper {
+    min-height: 100%;
+  }
+  .main-section .portfolio-section .bottom .portfolio-card .image-container .main-image .swiper .swiper-wrapper {
+    min-height: 100%;
+  }
+  .main-section .portfolio-section .bottom .portfolio-card .image-container .main-image .swiper .swiper-wrapper img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .main-section .portfolio-section .bottom .portfolio-card .image-container .sub-images {
+    display: none;
+  }
+  .main-section .portfolio-section .bottom .portfolio-card .text-container {
+    height: 40%;
+    width: 100%;
+    gap: 0.5rem;
+    padding: 0;
+    padding-top: 1rem;
+  }
+  .main-section .portfolio-section .bottom .portfolio-card .text-container p {
+    font-size: 0.7rem;
+  }
+  .main-section .portfolio-section .bottom .portfolio-card .text-container h1 {
+    font-size: 1rem;
+  }
+  .main-section .portfolio-section .bottom .portfolio-card .text-container .btn-div button {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .main-section .portfolio-section .bottom .portfolio-card {
+    height: 40rem;
+  }
+}
+.main-section .calc-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.main-section .calc-section .top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main-section .calc-section .top h1 {
+  font-size: 2rem;
+}
+@media (max-width: 600px) {
+  .main-section .calc-section .top h1 {
+    font-size: 1.2rem;
+  }
+}
+.main-section .calc-section .bottom {
+  display: flex;
+  justify-content: center;
+}
+.main-section .calc-section .bottom .container {
+  display: flex;
+  width: 45%;
+  flex-direction: column;
+  padding: 2rem;
+}
+.main-section .calc-section .bottom .container .input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-section .calc-section .bottom .container .check-boxes {
+  display: flex;
+  justify-content: space-between;
+}
+.main-section .calc-section .bottom .container .check-boxes .condition {
+  display: flex;
+  flex-direction: column;
+}
+.main-section .calc-section .bottom .container .check-boxes .condition .radio-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.main-section .calc-section .bottom .container .check-boxes .condition .radio-container input[type=radio] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main-section .calc-section .bottom .container .check-boxes .condition .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #e9e9e9;
+  border-radius: 50%;
+}
+.main-section .calc-section .bottom .container .check-boxes .condition .radio-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.main-section .calc-section .bottom .container .check-boxes .condition .radio-container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+.main-section .calc-section .bottom .container .check-boxes .condition .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.main-section .calc-section .bottom .container .check-boxes .condition .radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.main-section .calc-section .bottom .container .check-boxes .condition .radio-container .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+}
+.main-section .calc-section .bottom .container .check-boxes .type {
+  display: flex;
+  flex-direction: column;
+}
+.main-section .calc-section .bottom .container .check-boxes .type .radio-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.main-section .calc-section .bottom .container .check-boxes .type .radio-container input[type=radio] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main-section .calc-section .bottom .container .check-boxes .type .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #e9e9e9;
+  border-radius: 50%;
+}
+.main-section .calc-section .bottom .container .check-boxes .type .radio-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.main-section .calc-section .bottom .container .check-boxes .type .radio-container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+.main-section .calc-section .bottom .container .check-boxes .type .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.main-section .calc-section .bottom .container .check-boxes .type .radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.main-section .calc-section .bottom .container .check-boxes .type .radio-container .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+}
+.main-section .calc-section .bottom .container .total-output {
+  display: flex;
+  justify-content: space-between;
+}
+.main-section .calc-section .bottom .container .total-output .box {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+.main-section .calc-section .bottom .container .total-output .box .name {
+  display: flex;
+  color: white;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+}
+.main-section .calc-section .bottom .container .total-output .box .price {
+  display: flex;
+  background-color: white;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+.main-section .calc-section .bottom .container .total-output .box.standard .name {
+  background-color: rgb(0, 198, 27);
+}
+.main-section .calc-section .bottom .container .total-output .box.comfort .name {
+  background-color: rgb(0, 167, 22);
+}
+.main-section .calc-section .bottom .container .total-output .box.premium .name {
+  background-color: rgb(12, 137, 0);
+}
+.main-section .calc-section .bottom .container .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.main-section .calc-section .bottom .container .buttons button {
+  cursor: pointer;
+  padding: 2rem 1.8rem 2rem 1.8rem;
+  background-color: rgb(255, 239, 6);
+  box-shadow: 0px 4px 10px 0px rgba(255, 217, 22, 0.5);
+  border: none;
+  outline: none;
+  color: black;
+}
+@media (max-width: 1070px) {
+  .main-section .calc-section .bottom .container {
+    width: 55%;
+  }
+}
+@media (max-width: 900px) {
+  .main-section .calc-section .bottom .container {
+    width: 65%;
+  }
+}
+@media (max-width: 800px) {
+  .main-section .calc-section .bottom .container {
+    width: 75%;
+  }
+}
+@media (max-width: 750px) {
+  .main-section .calc-section .bottom .container .check-boxes {
+    flex-direction: column;
+  }
+  .main-section .calc-section .bottom .container .total-output {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .main-section .calc-section .bottom .container .total-output .box {
+    width: 100%;
+  }
+  .main-section .calc-section .bottom .container .buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 650px) {
+  .main-section .calc-section .bottom .container {
+    width: 90%;
+  }
+}
+.main-section .excursion-section {
+  display: flex;
+  width: 100%;
+  position: relative;
+  flex-direction: column;
+}
+.main-section .excursion-section .hidden-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 30%;
+  background-color: lightblue;
+  z-index: 20;
+}
+.main-section .excursion-section .hidden-window .notch {
+  display: flex;
+}
+.main-section .excursion-section .hidden-window .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-section .excursion-section .hidden-window .form .form-group p {
+  margin: 0;
+}
+.main-section .excursion-section .wrapper {
+  height: 100%;
+  width: 100%;
+  background-image: url("https://i.1.creatium.io/72/59/77/01959c57b8d52830c01aec28c8777dd1c3/vse.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.main-section .excursion-section .padding {
+  padding-top: 35rem;
+}
+.main-section .excursion-section .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.main-section .excursion-section .content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0;
+}
+.main-section .excursion-section .content h3 {
+  font-size: 1rem;
+}
+.main-section .excursion-section .content .btn-container button {
+  padding: 1.5rem;
+  color: black;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(255, 239, 6);
+  box-shadow: 0px 4px 10px 0px rgba(255, 217, 22, 0.5);
 }
 
 .material-symbols-outlined {

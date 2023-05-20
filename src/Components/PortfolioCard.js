@@ -42,17 +42,21 @@ export default function PortfolioCard(){
             </div>
 
             <div className="text-container">
-                <h1>Title</h1>
-                <p>Description dajkdhkajhdkjhadjkhkajdhkahjd</p>
+                <div className='texts'>
+                    <h1>Title</h1>
+                    <p>Капитальный ремонт 2х комнатной квартиры "под ключ". В данной квартире были проведены штукатурные работы, шпаклевание стен под покраску, окрашивание стен, укладка ламината, декоративные рейки и натяжные потолки.</p>
+                </div>
                 <div className="space">
-                    <img></img>
+                    <img src='https://i.1.creatium.io/22/07/3c/e94113b48cb2d19d16c41dffc469bffbba/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0-%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C.png'></img>
                     <p>Space</p>
                 </div>
                 <div className="price">
-                    <img></img>
+                    <img src='https://i.1.creatium.io/dd/4a/f3/293686d7fcc1515611fa433382450f20a7/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0-%D1%80%D1%83%D0%B1%D0%BB%D1%8C.png'></img>
                     <p>Price</p>
                 </div>
-                <button>Calculate price</button>
+                <div className='btn-div'>
+                    <button>Calculate price</button>
+                </div>
             </div>
         </div>
     )
