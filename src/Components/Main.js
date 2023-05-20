@@ -21,6 +21,9 @@ export default function Main(){
     const [rus, setRus] = useContext(LanguageContext)
     const [videos, setVideos] = useState([])
     const [workers, setWorkers] = useState([])
+    const [isHidden, setIsHidden] = useState(true)
+    const [name, setName] = useState('')
+    const [phoneNumber, setPhoneNumber] = useState('')
     useEffect(() => {
         const fetchData = async () => {
             try{
@@ -58,6 +61,25 @@ export default function Main(){
         }
         fetchData()
     }, [])
+
+    const toggleWindow = (e) => {
+        const root = document.getElementById('root')
+        if(isHidden){
+            setIsHidden(false)
+            root.setAttribute('class', 'overlay')
+        }else if(isHidden == false){
+            setIsHidden(true)
+            root.removeAttribute('class')
+        }
+    }
+    const signUp = async () => {
+        try{
+            const res = await axios.post('/telegram/excursion', {name, phoneNumber}, {headers: {"Content-Type": "application/json"}})
+            console.log(await res.data)
+        }catch(err){
+            console.log(err)
+        }
+    }
     return (
         <main className="main-section">
             <section className="banner-section">
@@ -287,25 +309,29 @@ export default function Main(){
                 </div>
             </section>
             <section className='excursion-section'>
-                <div className='hidden-window'>
+                <div className={isHidden ? "hidden-window" : "hidden-window active"}>
                     <div className='notch'>
-                        <h3>Экскурсия по объектам</h3>
+                        <div className='text'>
+                            <h3>Экскурсия по объектам</h3>
+                        </div>
                         <div className='close-btn'>
-                            <button>
+                            <button onClick={toggleWindow}>
                                 <img src={closeIcon}></img>
                             </button>
                         </div>
                     </div>
                     <div className='form'>
-                        <div class="form-group">
-                            <p>Name</p>
-                            <input type="text"/>
+                        <div className='inputs'>
+                            <div class="form-group">
+                                <p>Name</p>
+                                <input type="text" onChange={(e) => setName(e.target.value)} value={name}/>
+                            </div>
+                            <div class="form-group">
+                                <p>Phone</p>
+                                <input type="text" onChange={(e) => setPhoneNumber(e.target.value)} value={phoneNumber}/>
+                            </div>
+                            <button onClick={signUp}>Sign up</button>
                         </div>
-                        <div class="form-group">
-                            <p>Phone</p>
-                            <input type="text"/>
-                        </div>
-                        <button>Sign up</button>
                     </div>
                 </div>
                 <div className='wrapper'>
@@ -314,7 +340,7 @@ export default function Main(){
                         <h2>НЕ ВЕРЬТЕ НА СЛОВО, УБЕДИТЕСЬ ЛИЧНО!</h2>
                         <h3>Посетите наши текущие объекты, пообщайтесь с клиентами и убедитесь в качестве услуг</h3>
                         <div className='btn-container'>
-                            <button>Записаться на экскурсию</button>
+                            <button onClick={toggleWindow}>Записаться на экскурсию</button>
                         </div>
 
                     </div>
