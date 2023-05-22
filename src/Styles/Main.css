@@ -7,6 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: inherit;
+  position: relative;
   min-height: 100vh;
   width: 100vw;
   margin: 0;
@@ -19,11 +20,24 @@ body {
   flex-direction: column;
   flex: 1;
   overflow-x: hidden;
-  z-index: 999;
+  z-index: 22;
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.353);
+  height: 100%;
+  width: 100%;
+}
+
+.overlay.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.29);
+  z-index: 9999;
+  bottom: 0;
+  top: 0;
 }
 
 .main-section {
@@ -36,7 +50,16 @@ body {
 .main-section .banner-section {
   display: flex;
   flex-direction: column;
+  color: black;
+}
+.main-section .banner-section .bg-image {
   padding: 1rem;
+  background-image: url("https://i.1.creatium.io/36/44/29/54bd434d94a00869d9aa38c901d125819d/2048x1217q8/fon_noviy.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 .main-section .banner-section .perk-list {
   display: flex;
@@ -143,7 +166,7 @@ body {
   flex-direction: column;
 }
 .main-section .review-section .bg-image {
-  background-image: url("../Images/bg-image.jpg");
+  background-image: linear-gradient(46deg, rgba(255, 166, 0, 0.236), rgb(45, 44, 42)), url("../Images/bg-image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

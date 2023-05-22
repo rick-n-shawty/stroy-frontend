@@ -2,6 +2,7 @@ import axios from "axios";
 import { LanguageContext } from "../App";
 import { useContext, useState } from 'react';
 import closeIcon from '../Images/close-icon.svg';
+import logo from '../Images/Ecostroy.jpg';
 export default function Header(){
     const [rus, setRus] = useContext(LanguageContext)
     const [isPriceActive, setPriceActive] = useState(false)
@@ -16,16 +17,16 @@ export default function Header(){
         }
     }
     const togglePrice = (e) => {
-        const root = document.getElementById('root')
-        root.setAttribute('class', 'overlay')
+        const root = document.getElementById('overlay')
+        root.setAttribute('class', 'overlay active')
         if(isContactActive == true){
             setContactActive(false)
         }
         setPriceActive(true)
     }
     const toggleContact = (e) => {
-        const root = document.getElementById('root')
-        root.setAttribute('class', 'overlay')
+        const root = document.getElementById('overlay')
+        root.setAttribute('class', 'overlay active')
         if(isPriceActive === true){
             setPriceActive(false)
         }
@@ -58,8 +59,9 @@ export default function Header(){
     }
 
     const closeWindow = (e) => {
-        const root = document.getElementById('root')
+        const root = document.getElementById('overlay')
         root.removeAttribute('class')
+        root.setAttribute('class', 'overlay')
         if(e.target.id === 'contact-btn'){
             setContactActive(false)
         }else if(e.target.id === 'price-btn'){
@@ -70,7 +72,7 @@ export default function Header(){
         <>
         <header className="main-header">
             <div className="left-section">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Wikimedia-logo.png"></img>
+                <img src={logo}></img>
                 <p>
                     { rus ? "Делаем качественный ремонт квартир 'под ключ', без предоплаты, c гарантией в договоре 5 лет" : 
                     "Biz Toshkentda yuqori sifatli kalit taslim bo'lgan kvartirani oldindan to'lovsiz, shartnomada 5 yil kafolat bilan ta'mirlaymiz." }</p>

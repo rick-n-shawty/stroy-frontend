@@ -1,5 +1,6 @@
 @import './Styles/Main.css'; 
 @import './Styles/Header.css'; 
+@import "./Styles/Footer.css"; 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

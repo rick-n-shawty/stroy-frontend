@@ -1,0 +1,107 @@
+.main-footer {
+  display: flex;
+  width: 100%;
+  background-color: #333;
+  color: white;
+}
+.main-footer .left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 50%;
+  padding: 1rem;
+}
+.main-footer .left .icons {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  overflow: hidden;
+  height: 20%;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.main-footer .left .icons .btn-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 15%;
+  cursor: pointer;
+}
+.main-footer .left .icons .btn-wrapper .btn-content {
+  height: 100%;
+  width: 100%;
+}
+.main-footer .left .icons .btn-wrapper .btn-content img {
+  width: 90%;
+  height: 90%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.main-footer .left .text-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.main-footer .left .text-container p {
+  width: 80%;
+  flex-wrap: wrap;
+}
+.main-footer .right {
+  width: 50%;
+  padding: 2rem;
+}
+.main-footer .right div {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+.main-footer .right div .map {
+  height: 100%;
+  width: 100%;
+}
+.main-footer .right div .map .ymaps-2-1-79-map {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 750px) {
+  .main-footer {
+    flex-direction: column;
+  }
+  .main-footer .left {
+    width: 100%;
+  }
+  .main-footer .left .icons {
+    background-color: blue;
+    width: 100%;
+    justify-content: center;
+    height: 15%;
+  }
+  .main-footer .left .icons .btn-content img {
+    height: 80%;
+  }
+  .main-footer .left .text-container {
+    align-items: center;
+    background-color: red;
+  }
+  .main-footer .left .text-container p {
+    width: auto;
+  }
+  .main-footer .right {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .main-footer {
+    flex-direction: column;
+  }
+  .main-footer .left .text-container {
+    align-items: center;
+    background-color: red;
+  }
+  .main-footer .left .text-container p {
+    width: auto;
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=Footer.css.map */
