@@ -304,7 +304,7 @@ export default function Main(){
                             </div>
                         </div>
                         <div className='buttons'>
-                            <button>Расчитать по подробнее</button>
+                            <button><Link to={'/calc'}>Расчитать по подробнее</Link></button>
                             <button>Записаться на размер</button>
                         </div>
                     </div>
