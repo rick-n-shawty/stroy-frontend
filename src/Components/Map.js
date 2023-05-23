@@ -3,7 +3,7 @@ import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 export default function YandexMap(){
 
     const defaultState = {
-        center: [55.751574, 37.573856],
+        center: [41.299496, 69.240074],
         zoom: 5,
         height: '100%',
         width: '100%'
@@ -19,7 +19,7 @@ export default function YandexMap(){
         <div style={mapContainerStyle}>
         <YMaps query={{apikey: "199cc83c-14dd-49b7-ade3-a0480a09ad5d"}}>
             <Map className='map' defaultState={defaultState}>
-                <Placemark geometry={[55.684758, 37.738521]}/>
+                <Placemark geometry={[41.299496, 69.240074]}/>
             </Map>
         </YMaps>
         </div>

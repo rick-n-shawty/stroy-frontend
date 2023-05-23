@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
@@ -882,7 +883,158 @@ body {
   height: 100%;
 }
 .main-calc-section section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+}
+.main-calc-section section .calculator {
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  width: 80%;
+  padding: 1rem;
+}
+.main-calc-section section .calculator .option.one {
+  display: flex;
+  flex-direction: column;
+}
+.main-calc-section section .calculator .option.one div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.main-calc-section section .calculator .option.one div input {
+  outline: none;
+  width: 100%;
+  padding-left: 0.5rem;
+  height: 2rem;
+  border: none;
+  border-bottom: 2px black solid;
+}
+.main-calc-section section .calculator .option.two, .main-calc-section section .calculator .option.three {
+  display: flex;
+  flex-direction: column;
+}
+.main-calc-section section .calculator .option.two .radio-container, .main-calc-section section .calculator .option.three .radio-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.main-calc-section section .calculator .option.two .radio-container input[type=radio], .main-calc-section section .calculator .option.three .radio-container input[type=radio] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main-calc-section section .calculator .option.two .checkmark, .main-calc-section section .calculator .option.three .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #e9e9e9;
+  border-radius: 50%;
+}
+.main-calc-section section .calculator .option.two .radio-container:hover input ~ .checkmark, .main-calc-section section .calculator .option.three .radio-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.main-calc-section section .calculator .option.two .radio-container input:checked ~ .checkmark, .main-calc-section section .calculator .option.three .radio-container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+.main-calc-section section .calculator .option.two .checkmark:after, .main-calc-section section .calculator .option.three .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.main-calc-section section .calculator .option.two .radio-container input:checked ~ .checkmark:after, .main-calc-section section .calculator .option.three .radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.main-calc-section section .calculator .option.two .radio-container .checkmark:after, .main-calc-section section .calculator .option.three .radio-container .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+}
+.main-calc-section section .calculator .option.four.five {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+.main-calc-section section .calculator .option.four.five .four, .main-calc-section section .calculator .option.four.five .five {
+  width: 20%;
+  /* Add custom arrow icon */
+  /* Style when the select element is focused */
+}
+.main-calc-section section .calculator .option.four.five .four select, .main-calc-section section .calculator .option.four.five .five select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #555;
+  width: 100%;
+  cursor: pointer;
+}
+.main-calc-section section .calculator .option.four.five .four select::after, .main-calc-section section .calculator .option.four.five .five select::after {
+  content: "▼"; /* Unicode character for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  color: #555;
+  pointer-events: none;
+}
+.main-calc-section section .calculator .option.four.five .four select:focus, .main-calc-section section .calculator .option.four.five .five select:focus {
+  outline: none;
+  border-color: #5c9eff;
+  box-shadow: 0 0 0 2px rgba(92, 158, 255, 0.25);
+}
+.main-calc-section section .calculator .option.six, .main-calc-section section .calculator .option.eight, .main-calc-section section .calculator .option.seven {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Create a custom checkbox */
+  /* Style the checkmark */
+  /* Show the checkmark when the checkbox is checked */
+}
+.main-calc-section section .calculator .option.six label, .main-calc-section section .calculator .option.eight label, .main-calc-section section .calculator .option.seven label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main-calc-section section .calculator .option.six input[type=checkbox], .main-calc-section section .calculator .option.eight input[type=checkbox], .main-calc-section section .calculator .option.seven input[type=checkbox] {
+  display: none;
+}
+.main-calc-section section .calculator .option.six .checkbox, .main-calc-section section .calculator .option.eight .checkbox, .main-calc-section section .calculator .option.seven .checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+.main-calc-section section .calculator .option.six .checkbox::after, .main-calc-section section .calculator .option.eight .checkbox::after, .main-calc-section section .calculator .option.seven .checkbox::after {
+  content: "✓";
+  font-size: 16px;
+  color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-calc-section section .calculator .option.six input[type=checkbox]:checked + .checkbox::after, .main-calc-section section .calculator .option.eight input[type=checkbox]:checked + .checkbox::after, .main-calc-section section .calculator .option.seven input[type=checkbox]:checked + .checkbox::after {
+  color: #555;
 }
 
 .material-symbols-outlined {

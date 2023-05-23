@@ -15,7 +15,9 @@ export default function Calc(){
                         <p>
                             <strong>1. Укажите общую площадь квартиры по полу</strong>
                         </p>
-                        <input type='number'/>
+                        <div>
+                            <input type='number'/>
+                        </div>
                     </div>
                     <div className='option two'>
                         <p>
@@ -64,19 +66,22 @@ export default function Calc(){
                         <div className='four'>
                             <p><strong>4. Количество комнат</strong></p>
                             <select>
-                                <option></option>
-                                <option></option>
-                                <option></option>
-                                <option></option>
+                                <option value={''} disabled selected>Select option</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                                <option>Option 4</option>
+                                <option>Option 5</option>
+                                <option>Option 6</option>
                             </select>
                         </div>
                         <div className='five'>
                             <p><strong>5. Санузел</strong></p>
                             <select>
-                                <option></option>
-                                <option></option>
-                                <option></option>
-                                <option></option>
+                                <option value={''} disabled selected>Select option</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
                             </select>
                         </div>
                     </div>
@@ -84,31 +89,65 @@ export default function Calc(){
                         <p>
                             <strong>6. Электромонтажные работы</strong>
                         </p>
-                        <div>
-                            <input type='checkbox'/>
-                            <input type='checkbox'/>
-                        </div>
+                        <label>
+                            <input type="checkbox"/>
+                            <span class="checkbox"></span>
+                            Установка розеток и выключателей
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            <span class="checkbox"></span>
+                            Разводка эл.проводки
+                        </label>
                     </div>
                     <div className='option seven'> 
                         <p>
                             <strong>7. Сантехнические работы</strong>
                         </p>
-                        <div>
-                            <input type='checkbox'/>
-                            <input type='checkbox'/>
-                        </div>
+                        <label>
+                            <input type="checkbox"/>
+                            <span class="checkbox"></span>
+                            Установка розеток и выключателей
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            <span class="checkbox"></span>
+                            Разводка эл.проводки
+                        </label>
                     </div>
                     <div className='option eight'>
                         <p>
                             <strong>8. Дополнительные работы</strong>
                         </p>
-                        <div>
-                            <input type='checkbox'/>
-                            <input type='checkbox'/>
-                            <input type='checkbox'/>
-                            <input type='checkbox'/>
-                            <input type='checkbox'/>
-                        </div>
+                        <label>
+                            <input type="checkbox"/>
+                            <span class="checkbox"></span>
+                            Установка розеток и выключателей
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            <span class="checkbox"></span>
+                            Установка розеток и выключателей
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            <span class="checkbox"></span>
+                            Установка розеток и выключателей
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            <span class="checkbox"></span>
+                            Установка розеток и выключателей
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            <span class="checkbox"></span>
+                            Установка розеток и выключателей
+                        </label>
+                    </div>
+                    <div className='contact-form'>
+                        <input type='text'/>
+                        <button>Done</button>
                     </div>
                 </div>
             </section>
