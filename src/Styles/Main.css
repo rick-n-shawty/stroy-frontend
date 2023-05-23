@@ -35,7 +35,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.29);
   z-index: 9999;
   bottom: 0;
   top: 0;
@@ -891,9 +890,11 @@ body {
 .main-calc-section section .calculator {
   display: flex;
   flex-direction: column;
-  background-color: lightblue;
+  background-color: rgb(227, 227, 227);
+  border-radius: 1rem;
   width: 80%;
   padding: 1rem;
+  margin-bottom: 2rem;
 }
 .main-calc-section section .calculator .option.one {
   display: flex;
@@ -936,14 +937,14 @@ body {
   left: 0;
   height: 20px;
   width: 20px;
-  background-color: #e9e9e9;
+  background-color: rgb(131, 186, 131);
   border-radius: 50%;
 }
 .main-calc-section section .calculator .option.two .radio-container:hover input ~ .checkmark, .main-calc-section section .calculator .option.three .radio-container:hover input ~ .checkmark {
   background-color: #ccc;
 }
 .main-calc-section section .calculator .option.two .radio-container input:checked ~ .checkmark, .main-calc-section section .calculator .option.three .radio-container input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: green;
 }
 .main-calc-section section .calculator .option.two .checkmark:after, .main-calc-section section .calculator .option.three .checkmark:after {
   content: "";
@@ -1035,6 +1036,46 @@ body {
 }
 .main-calc-section section .calculator .option.six input[type=checkbox]:checked + .checkbox::after, .main-calc-section section .calculator .option.eight input[type=checkbox]:checked + .checkbox::after, .main-calc-section section .calculator .option.seven input[type=checkbox]:checked + .checkbox::after {
   color: #555;
+}
+.main-calc-section section .calculator .contact-form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.main-calc-section section .calculator .contact-form button {
+  cursor: pointer;
+  background-color: rgb(92, 181, 92);
+  border: none;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  color: black;
+  outline: none;
+}
+.main-calc-section section .calculator .contact-form button:hover {
+  background-color: green;
+  transition: background-color 0.5s ease-in-out;
+}
+.main-calc-section section .calculator .contact-form input {
+  outline: none;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+@media (max-width: 900px) {
+  .main-calc-section section .calculator .option.four.five {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .main-calc-section section .calculator .option.four.five .four {
+    width: 80%;
+  }
+  .main-calc-section section .calculator .option.four.five .five {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .main-calc-section section .calculator {
+    width: 90%;
+  }
 }
 
 .material-symbols-outlined {

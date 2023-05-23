@@ -2,6 +2,7 @@ import {LanguageContext} from '../App';
 import { useContext, useState } from 'react';
 import axios from 'axios';
 export default function Calc(){
+    const [rus, setRus] = useContext(LanguageContext)
     return (
         <main className="main-calc-section">
             <section>
@@ -146,7 +147,7 @@ export default function Calc(){
                         </label>
                     </div>
                     <div className='contact-form'>
-                        <input type='text'/>
+                        <input placeholder='Name' type='text'/>
                         <button>Done</button>
                     </div>
                 </div>

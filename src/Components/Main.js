@@ -42,14 +42,17 @@ export default function Main(){
                 })
                 const workerRes = await axios.get('/employee')
                 const workersArr = await workerRes.data.employees
+                console.log(workersArr)
                 const workerCards = workersArr.map(item => {
                     return <EmployeeCard 
                     key={item._id} 
                     name={item.name} 
-                    position={item.position}
+                    positionRu={item.positionRu}
+                    positionUz={item.positionUz}
                     picture={item.picture}
                     exp={item.experience}
-                    desc={item.description}
+                    descRu={item.descriptionRu}
+                    descUz = {item.descriptionUz}
                     />
                 })
                 setWorkers(workerCards)
