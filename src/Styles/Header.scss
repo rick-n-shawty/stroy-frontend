@@ -290,12 +290,14 @@
         }
     }
     @media (max-width: 450px) {
+        padding-left: 0rem;
+        padding-right: 0rem;
         .left-section{
             img{
-                height: 120%;
+                height: 190%;
             }
             p{
-                font-size: .7rem;
+                font-size: .6rem;
             }
         }
         .right-section{
@@ -304,6 +306,7 @@
             padding: 1rem;
             button{
                 padding: 1rem;
+                font-size: .5rem
             }
             
             select{

@@ -286,11 +286,15 @@
   }
 }
 @media (max-width: 450px) {
+  .main-header {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
   .main-header .left-section img {
-    height: 120%;
+    height: 190%;
   }
   .main-header .left-section p {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
   .main-header .right-section {
     display: flex;
@@ -299,6 +303,7 @@
   }
   .main-header .right-section button {
     padding: 1rem;
+    font-size: 0.5rem;
   }
   .main-header .right-section select {
     padding: 0.5rem;
