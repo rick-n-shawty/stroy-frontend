@@ -3,15 +3,13 @@ import {Link} from 'react-router-dom';
 import {LanguageContext} from '../App';
 import {useState, useEffect, useContext} from 'react';
 import EmployeeCard from './EmployeeCard';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import closeIcon from '../Images/close-icon.svg'
 
 
 import {Swiper, useSwiper, SwiperSlide} from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-// import 'swiper/css/scrollbar';
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.css"
 
@@ -83,6 +81,7 @@ export default function Main(){
             console.log(err)
         }
     }
+    const navigate = useNavigate()
     return (
         <main className="main-section">
             <section className="banner-section">
@@ -115,7 +114,7 @@ export default function Main(){
                         </div>
                     </div>
                     <div className="calc-link">
-                        <button>Find out price</button>
+                        <button onClick={(e) => navigate('/calc')}>Find out price</button>
                     </div>
                 </div>
             </section>
@@ -128,7 +127,7 @@ export default function Main(){
                     <div className="card">
                         <div className='notch'>
                             <img src='https://i.1.creatium.io/51/01/da/ec19a4027b7aec95c47cdcc53eb2aca183/%D0%BA%D1%80%D0%B5%D1%81%D1%82%D0%B8%D0%BA.png'></img>
-                            <h3>Text</h3>
+                            <h3>КРИВЫЕ РУКИ</h3>
                         </div>
                         <p>
                             Нарваться на неопытных мастеров, которые сделали ремонт у себя дома и теперь считают себя супер профессионалами. Обещают сделать "евро" ремонт недорого, но не имеют представления о СНиП, стандартах и делают всю работу с помощью молотка и отвертки
@@ -137,28 +136,28 @@ export default function Main(){
                     <div className="card">
                         <div className='notch'>
                             <img src='https://i.1.creatium.io/51/01/da/ec19a4027b7aec95c47cdcc53eb2aca183/%D0%BA%D1%80%D0%B5%D1%81%D1%82%D0%B8%D0%BA.png'></img>
-                            <h3>Text</h3>
+                            <h3>МОШЕННИКИ</h3>
                         </div>
                         <p>
-                            Нарваться на неопытных мастеров, которые сделали ремонт у себя дома и теперь считают себя супер профессионалами. Обещают сделать "евро" ремонт недорого, но не имеют представления о СНиП, стандартах и делают всю работу с помощью молотка и отвертки
+                            Которые нальют в уши "мёда", а после того как получат аванс выключают телефон и пропадают. Либо кормят завтраками и говорят, что скоро все сделают и просят еще денег на непредвиденные расходы. А договора конечно нет или он оформлен на несуществующую компанию
                         </p>
                     </div>
                     <div className="card">
                         <div className='notch'>
                             <img src='https://i.1.creatium.io/51/01/da/ec19a4027b7aec95c47cdcc53eb2aca183/%D0%BA%D1%80%D0%B5%D1%81%D1%82%D0%B8%D0%BA.png'></img>
-                            <h3>Text</h3>
+                            <h3>УВЕЛИЧЕНИЕ СМЕТЫ</h3>
                         </div>
                         <p>
-                            Нарваться на неопытных мастеров, которые сделали ремонт у себя дома и теперь считают себя супер профессионалами. Обещают сделать "евро" ремонт недорого, но не имеют представления о СНиП, стандартах и делают всю работу с помощью молотка и отвертки
+                            Некоторые недобросовестные отделочники специально занижают стоимость и не включают некоторые виды работ чтобы получить заказ, а уже в процессе всплывает “мы об этом не договаривались”, “забыли посчитать”, “не увидели” а Вам ничего не останется как “платить и плакать”
                         </p>
                     </div>
                     <div className="card">
                         <div className='notch'>
                             <img src='https://i.1.creatium.io/51/01/da/ec19a4027b7aec95c47cdcc53eb2aca183/%D0%BA%D1%80%D0%B5%D1%81%D1%82%D0%B8%D0%BA.png'></img>
-                            <h3>Text</h3>
+                            <h3>НАРУШЕНИЕ СРОКОВ</h3>
                         </div>
                         <p>
-                            Нарваться на неопытных мастеров, которые сделали ремонт у себя дома и теперь считают себя супер профессионалами. Обещают сделать "евро" ремонт недорого, но не имеют представления о СНиП, стандартах и делают всю работу с помощью молотка и отвертки
+                            Сначала обещают сделать ремонт за 30 дней, но это только на словах и ни какой ответственности в договоре. Мастера приходят когда удобно, устраивают перекур каждые 10 минут, не выходят на работу, оправдываясь что "кошка заболела". И в итоге Ваш ремонт длится пол год
                         </p>
                     </div>
                 </div>
@@ -255,17 +254,17 @@ export default function Main(){
                                 <label class="radio-container">
                                     <input type="radio" name="radio-cond"/>
                                     <span class="checkmark"></span>
-                                    Вторичка со старым ремонтом
+                                    Новостройка с черновой отделкой
                                 </label>   
                                 <label class="radio-container">
                                     <input type="radio" name="radio-cond"/>
                                     <span class="checkmark"></span>
-                                    Вторичка со старым ремонтом
+                                    Новостройка с чистовой отделкой
                                 </label>   
                                 <label class="radio-container">
                                     <input type="radio" name="radio-cond"/>
                                     <span class="checkmark"></span>
-                                    Вторичка со старым ремонтом
+                                    Новостройка без отделки
                                 </label>   
                             </div>
                             <div className='type'>
@@ -278,17 +277,17 @@ export default function Main(){
                                 <label class="radio-container">
                                     <input type="radio" name="radio-type"/>
                                     <span class="checkmark"></span>
-                                    Черновая отделка
+                                    Косметический ремонт
                                 </label>                
                                 <label class="radio-container">
                                     <input type="radio" name="radio-type"/>
                                     <span class="checkmark"></span>
-                                    Черновая отделка
+                                    Капитальный ремонт
                                 </label>                
                                 <label class="radio-container">
                                     <input type="radio" name="radio-type"/>
                                     <span class="checkmark"></span>
-                                    Черновая отделка
+                                    Капитальный по дизайн проекту
                                 </label>                
                             </div>
                         </div>
@@ -307,7 +306,7 @@ export default function Main(){
                             </div>
                         </div>
                         <div className='buttons'>
-                            <button><Link to={'/calc'}>Расчитать по подробнее</Link></button>
+                            <button onClick={(e)=> navigate('/calc')}>Расчитать по подробнее</button>
                             <button>Записаться на размер</button>
                         </div>
                     </div>

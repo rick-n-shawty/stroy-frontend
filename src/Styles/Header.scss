@@ -6,6 +6,8 @@
     position: relative;
     padding: .5rem;
     flex-direction: row;
+    padding-left: 5rem;
+    padding-right: 5rem;
     color: black;
     .hidden-contact{
         display: flex;
@@ -154,10 +156,11 @@
         padding: 1rem;
         img{
             object-fit: contain;
-            height: 100%;
+            height: 160%;
         }
         p{
             width: 80%;
+            font-size: .9rem;
             word-break: break-all;
             margin-left: .5rem;
         }
@@ -215,10 +218,19 @@
             }
               
     }
+    @media (max-width: 1000px) {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
     @media (max-width: 900px) {
+        padding-left: 3rem;
+        padding-right: 3rem;
         .left-section{
             img{
-                height: 85%;
+                height: 130%;
+            }
+            p{
+                font-size: .8rem;
             }
         }
         .right-section{
@@ -230,17 +242,24 @@
         }
     }
     @media (max-width: 830px) {
-        .left-section{
-            img{
-                height: 85%;
-            }
-        }
+        padding-left: 2rem;
+        padding-right: 2rem;
         .right-section{
             button{
-                padding: 0;
+                padding: .5rem;
                 font-size: .7rem;
                 font-weight: 500;
                 margin: .5rem
+            }
+        }
+    }
+    @media (max-width: 750px) {
+        .left-section{
+            img{
+                height: 120%;
+            }
+            p{
+                font-size: .7rem;
             }
         }
     }
@@ -253,6 +272,14 @@
         .left-section{
             height: 70%;
             width: 100%;
+            img{
+                height: 180%;
+                object-fit: contain;
+            }
+            p{
+                width: 50%;
+                font-size: .8rem;
+            }
         }
         .right-section{
             height: 30%;
@@ -263,6 +290,14 @@
         }
     }
     @media (max-width: 450px) {
+        .left-section{
+            img{
+                height: 120%;
+            }
+            p{
+                font-size: .7rem;
+            }
+        }
         .right-section{
             display: flex;
             align-items: center;

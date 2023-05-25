@@ -129,6 +129,8 @@ body{
         display: flex;
         flex-direction: column;
         padding: 1rem;
+        padding-left: 10rem;
+        padding-right: 10rem;
         .top{
             display: flex;
             justify-content: center;
@@ -148,12 +150,37 @@ body{
                         height: 3rem;
                     }
                 }
+                p{
+                    font-size: 1.2rem;
+                }
             }
             @media (max-width: 600px) {
                 grid-template-columns: 1fr;
             }
         }
-
+        @media (max-width: 900px) {
+            padding-left: 8rem;
+            padding-right: 8rem;
+        }
+        @media (max-width: 800px) {
+            padding-left: 6rem;
+            padding-right: 6rem;
+        }
+        @media (max-width: 700px) {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+        @media (max-width: 500px) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            .bottom{
+                .card{
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
     }
     .review-section{
         display: flex;
@@ -208,7 +235,7 @@ body{
         display: flex;
         padding: 1rem;
         flex-direction: column;
-   
+        align-items: center;
         .top{
             display: flex;
             justify-content: center;
@@ -216,9 +243,10 @@ body{
         .bottom{
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 1rem;
             .certificate-img{
-                width: 50%;
+                width: 25%;
                 object-fit: contain;
             }
             .text-cards{

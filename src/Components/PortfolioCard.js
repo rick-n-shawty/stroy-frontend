@@ -2,8 +2,10 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 import "swiper/swiper-bundle.min.css";
+import { useNavigate } from 'react-router-dom';
 
 export default function PortfolioCard(){
+    const navigate = useNavigate()
     return(
         <div className="portfolio-card">
             <div className="image-container">
@@ -55,7 +57,7 @@ export default function PortfolioCard(){
                     <p>Price</p>
                 </div>
                 <div className='btn-div'>
-                    <button>Calculate price</button>
+                    <button onClick={(e) => navigate('/calc')}>Calculate price</button>
                 </div>
             </div>
         </div>

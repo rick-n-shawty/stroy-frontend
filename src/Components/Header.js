@@ -3,12 +3,15 @@ import { LanguageContext } from "../App";
 import { useContext, useState } from 'react';
 import closeIcon from '../Images/close-icon.svg';
 import logo from '../Images/Ecostroy.jpg';
+import { useNavigate } from "react-router-dom";
 export default function Header(){
     const [rus, setRus] = useContext(LanguageContext)
     const [isPriceActive, setPriceActive] = useState(false)
     const [isContactActive, setContactActive] = useState(false)
     const [phoneNum, setPhoneNum] = useState('')
     const [error, setError] = useState('')
+    const [msg, setMsg] = useState('')
+    const navigate = useNavigate()
     const handleLngChange = (e) => {
         if(e.target.value === 'option1'){
             setRus(true)
@@ -41,6 +44,7 @@ export default function Header(){
             const res = await axios.post('/telegram/prices', {phoneNumber: phoneNum})
             console.log(await res.data)
             setError('')
+            setMsg('Заявка была отправленна!')
             setPhoneNum('')
         }catch(err){
             console.log(err)
@@ -53,6 +57,7 @@ export default function Header(){
             }
             const res = await axios.post('/telegram/contact', {phoneNumber: phoneNum})
             console.log(await res.data)
+            setMsg('Заявка была отправленна!')
         }catch(err){
             console.log(err)
         }
@@ -72,7 +77,7 @@ export default function Header(){
         <>
         <header className="main-header">
             <div className="left-section">
-                <img src={logo}></img>
+                <img src={logo} onClick={(e) => navigate('/')}></img>
                 <p>
                     { rus ? "Делаем качественный ремонт квартир 'под ключ', без предоплаты, c гарантией в договоре 5 лет" : 
                     "Biz Toshkentda yuqori sifatli kalit taslim bo'lgan kvartirani oldindan to'lovsiz, shartnomada 5 yil kafolat bilan ta'mirlaymiz." }</p>
@@ -100,7 +105,7 @@ export default function Header(){
                     <p>{rus ? "Отправим 3 варианта сметы, выполненных нами объектов + подробный прайс, актуальный на 2023 год" : 
                     "Biz tugatgan ob'ektlarni baholash uchun 3 ta variantni + 2023 yilga tegishli batafsil narxlar ro'yxatini yuboramiz."}</p>
                     <input placeholder={rus? "Номер" : "Raqam"} onChange={(e) => setPhoneNum(e.target.value)} value={phoneNum}/>
-                    <button onClick={sendPriceRequest}>{rus ? "Готово" : "Tayyor"}</button>
+                    {msg ? msg : <button onClick={sendPriceRequest}>{rus ? "Готово" : "Tayyor"}</button>}
                 </div>
             </div>
 
@@ -111,7 +116,7 @@ export default function Header(){
                 <div className="main">
                     <p>{ rus ? "Получите консультацию от профессионала" : "Professionaldan maslahat oling"}</p>
                     <input placeholder={rus? "Номер" : "Raqam"} onChange={(e) => setPhoneNum(e.target.value)} value={phoneNum}/>
-                    <button onClick={sendContactRequest}>{rus ? "Связаться с прорабом" : "Ustaga murojaat qiling"}</button>
+                    {msg ? msg : <button onClick={sendContactRequest}>{rus ? "Готово" : "Tayyor"}</button>}
                 </div>
             </div>
 
