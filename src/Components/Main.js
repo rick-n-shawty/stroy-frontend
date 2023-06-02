@@ -273,40 +273,40 @@ export default function Main(){
                                 <label class="radio-container">
                                     <input type="radio" name="radio-cond"/>
                                     <span class="checkmark"></span>
-                                    Новостройка с черновой отделкой
+                                    {rus ? "Новостройка с черновой отделкой" : "Янги қурилган уй (0 дан)"}
                                 </label>   
                                 <label class="radio-container">
                                     <input type="radio" name="radio-cond"/>
                                     <span class="checkmark"></span>
-                                    Новостройка с чистовой отделкой
+                                    {rus ? "Новостройка с чистовой отделкой" : "Янги қурилган уй (тоза отделка ишлари)"}
                                 </label>   
                                 <label class="radio-container">
                                     <input type="radio" name="radio-cond"/>
                                     <span class="checkmark"></span>
-                                    Новостройка без отделки
+                                    {rus ? "Новостройка без отделки" : "Янги қурилган уй (отделкасиз)"}
                                 </label>   
                             </div>
                             <div className='type'>
-                                <h3>Тип ремонта</h3>
+                                <h3>{rus ? "Тип ремонта" : "Таъмирлаш типы"}</h3>
                                 <label class="radio-container">
                                     <input type="radio" name="radio-type"/>
                                     <span class="checkmark"></span>
-                                    Черновая отделка
+                                    {rus ? "Черновая отделка" : "Қора ишлар"}
                                 </label>                
                                 <label class="radio-container">
                                     <input type="radio" name="radio-type"/>
                                     <span class="checkmark"></span>
-                                    Косметический ремонт
+                                    {rus ? "Косметический ремонт" : "Косметик таъмирлаш"}
                                 </label>                
                                 <label class="radio-container">
                                     <input type="radio" name="radio-type"/>
                                     <span class="checkmark"></span>
-                                    Капитальный ремонт
+                                    {rus ? "Капитальный ремонт" : "Капитал таъмирлаш"}
                                 </label>                
                                 <label class="radio-container">
                                     <input type="radio" name="radio-type"/>
                                     <span class="checkmark"></span>
-                                    Капитальный по дизайн проекту
+                                    {rus ? "Капитальный по дизайн проекту" : "Капитпл таъмирлаш проект асосида"}
                                 </label>                
                             </div>
                         </div>
