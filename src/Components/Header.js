@@ -80,14 +80,14 @@ export default function Header(){
                 <img src={logo} onClick={(e) => navigate('/')}></img>
                 <p>
                     { rus ? "Делаем качественный ремонт квартир 'под ключ', без предоплаты, c гарантией в договоре 5 лет" : 
-                    "Biz Toshkentda yuqori sifatli kalit taslim bo'lgan kvartirani oldindan to'lovsiz, shartnomada 5 yil kafolat bilan ta'mirlaymiz." }</p>
+                    "Тошкентда квартиларни сифатли таъмирлаш хизмати, 1 йил кафолат билан." }</p>
             </div>
             <div className="right-section">
                 <button id="price-button" className={isPriceActive ? "price-btn active" : "price-btn"} onClick={togglePrice}>
-                    { rus ? "Цены + примеры сметы" : "Narxlar + taxminiy misollar"}
+                    { rus ? "Цены + примеры сметы" : "Нар + смета наъмуналари"}
                 </button>
                 <button id="contact-button" onClick={toggleContact} className={isContactActive ? "contact-btn active": "contact-btn"}>
-                    { rus ? "Связаться с прорабом" : "Ustaga murojaat qiling"}
+                    { rus ? "Связаться с прорабом" : "Прорабга мурожаат килинг"}
                 </button>
                 <select id="options" onChange={handleLngChange}>
                     <option value={'option1'}>Русский язык</option>
