@@ -32,7 +32,7 @@ export default function Main(){
                     className='video-frame' 
                     key={item._id}
                     width="100%"
-                    height="220px"
+                    height="100%"
                     src={item.url}
                     title="YouTube video player" frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -86,8 +86,12 @@ export default function Main(){
         <main className="main-section">
             <section className="banner-section">
                 <div className='bg-image'>
-                    <h2>{rus ? "Мы предоставляем качественные и доступные услуги по ремонту вашей квартиры в Ташкенте.": "Тошкент шаҳрида Сизниг квартирангизни сифатли ва хамёнбоб таъмирлаш ҳизматларини амалга оширамиз. "}</h2>
-                    <h3>{rus ? "На сегодняшний день у нас работает профессиональная команда с 3-х летним опытом, сдавшая более 100 объектов их владельцам. Вы можете доверять нам!": "Бугунги кунга келиб 100 дан ортиқ объектларни ўз эгаларига топшириб, 3 йиллик тажрибага эга профессионал командага эгамиз. Бизга ишонсангиз бўлади!"}</h3>
+                    <div className='top'>                     
+                        <div className='h1-div'>{rus ? <span>Мы предоставляем {<span className='partial-color'>качественные и доступные</span>} услуги по ремонту вашей квартиры в Ташкенте.</span>: 
+                        <span>Тошкент шаҳрида Сизниг квартирангизни {<span className='partial-color'>сифатли ва хамёнбоб</span>} таъмирлаш ҳизматларини амалга оширамиз. </span>}</div>
+                        <div className='h2-div'>{rus ? <span>На сегодняшний день у нас работает профессиональная команда с 3-х летним опытом, сдавшая более <span className='partial-color'>100 объектов</span> их владельцам. Вы можете доверять нам!</span>: 
+                        <span>Бугунги кунга келиб <span className='partial-color'>100 дан ортиқ объектларни</span> ўз эгаларига топшириб, 3 йиллик тажрибага эга профессионал командага эгамиз. Бизга ишонсангиз бўлади!</span>}</div>
+                    </div>
                     <div className="perk-list">
                         <div>
                             <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Wallet_Flat_Icon.svg/1024px-Wallet_Flat_Icon.svg.png?20180301073008'></img>
@@ -101,7 +105,7 @@ export default function Main(){
                             <div className='text'>
                                 <h3>{rus ? "ГАРАНТИЯ 100%": "100% Кафолат"}</h3>
                                 <p>
-                                    {rus ? "Фиксированная смета и официальный договор с гарантией 5 лет": "Смета бўйича келишилган нарх ва расмий шартнома орқали 1 йил кафалат"}
+                                    {rus ? "Фиксированная смета и официальный договор с гарантией в 1 год": "Смета бўйича келишилган нарх ва расмий шартнома орқали 1 йил кафалат"}
                                 </p>
                             </div>
                         </div>
@@ -213,9 +217,9 @@ export default function Main(){
                     </div>
                 </div>
             </section>
-            <section className="team-section">
+            <section className="team-section">  
                 <div className='top'>
-                    <h1>{rus ? "КТО БУДЕТ  ДЕЛАТЬ РЕМОНТ?": "Таъмирлаш ишларини кимлар олиб боради?"}</h1>
+                    <h1>{rus ? `КТО БУДЕТ ДЕЛАТЬ РЕМОНТ?`: "Таъмирлаш ишларини кимлар олиб боради?"}</h1>
                     <h2>{rus ? 
                     "Только проверенные, адекватные специалисты с реальным опытом и профессиональным инструментом. Всегда трезвые, соблюдают дисциплину и аккуратно относятся к вашему имуществу": 
                     "Фақатгина куп йиллик тажрибаси ва профессионал, ўз ишини билган усталар амалга оширишади."}</h2>
