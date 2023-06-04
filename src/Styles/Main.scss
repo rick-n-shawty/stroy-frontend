@@ -55,6 +55,36 @@ body{
             background-repeat: no-repeat;
             height: 100%;
             width: 100%;
+            h2{
+                margin-left: 5rem;
+            }
+            h3{
+                margin-left: 5rem;
+            }
+            @media (max-width: 900px) {
+                h2{
+                    margin-left: 3rem;
+                }
+                h3{
+                    margin-left: 3rem;
+                }
+            }
+            @media (max-width: 700px) {
+                h2{
+                    margin-left: 2rem;
+                }
+                h3{
+                    margin-left: 2rem;
+                }
+            }
+            @media (max-width: 550px) {
+                h2{
+                    margin-left: 0rem;
+                }
+                h3{
+                    margin-left: 0rem;
+                }
+            }
         }
         .perk-list{
             display: flex;

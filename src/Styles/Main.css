@@ -61,6 +61,36 @@ body {
   height: 100%;
   width: 100%;
 }
+.main-section .banner-section .bg-image h2 {
+  margin-left: 5rem;
+}
+.main-section .banner-section .bg-image h3 {
+  margin-left: 5rem;
+}
+@media (max-width: 900px) {
+  .main-section .banner-section .bg-image h2 {
+    margin-left: 3rem;
+  }
+  .main-section .banner-section .bg-image h3 {
+    margin-left: 3rem;
+  }
+}
+@media (max-width: 700px) {
+  .main-section .banner-section .bg-image h2 {
+    margin-left: 2rem;
+  }
+  .main-section .banner-section .bg-image h3 {
+    margin-left: 2rem;
+  }
+}
+@media (max-width: 550px) {
+  .main-section .banner-section .bg-image h2 {
+    margin-left: 0rem;
+  }
+  .main-section .banner-section .bg-image h3 {
+    margin-left: 0rem;
+  }
+}
 .main-section .banner-section .perk-list {
   display: flex;
   min-height: 30rem;
