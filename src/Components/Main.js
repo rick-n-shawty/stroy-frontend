@@ -6,9 +6,10 @@ import EmployeeCard from './EmployeeCard';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import closeIcon from '../Images/close-icon.svg'
+import logoIcon from '../Images/Ecostroy.jpg'
+import moneyIcon from '../Images/salary.png';
 
-
-import {Swiper, useSwiper, SwiperSlide} from 'swiper/react';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.css"
@@ -84,45 +85,47 @@ export default function Main(){
     const navigate = useNavigate()
     return (
         <main className="main-section">
-            <section className="banner-section">
-                <div className='bg-image'>
-                    <div className='top'>                     
-                        <div className='h1-div'>{rus ? <span>Мы предоставляем {<span className='partial-color'>качественные и доступные</span>} услуги по ремонту вашей квартиры в Ташкенте.</span>: 
-                        <span>Тошкент шаҳрида Сизниг квартирангизни {<span className='partial-color'>сифатли ва хамёнбоб</span>} таъмирлаш ҳизматларини амалга оширамиз. </span>}</div>
-                        <div className='h2-div'>{rus ? <span>На сегодняшний день у нас работает профессиональная команда с 3-х летним опытом, сдавшая более <span className='partial-color'>100 объектов</span> их владельцам. Вы можете доверять нам!</span>: 
-                        <span>Бугунги кунга келиб <span className='partial-color'>100 дан ортиқ объектларни</span> ўз эгаларига топшириб, 3 йиллик тажрибага эга профессионал командага эгамиз. Бизга ишонсангиз бўлади!</span>}</div>
-                    </div>
-                    <div className="perk-list">
-                        <div>
-                            <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Wallet_Flat_Icon.svg/1024px-Wallet_Flat_Icon.svg.png?20180301073008'></img>
-                            <div className='text'>
-                                <h3>{rus ? " Без продоплат" : "Бошланғич туловларсиз"}</h3>
-                                <p>{rus ? "Оплачивайте работу только после выполнения и проверки качества" : "Ишни амалга оширилганлиги учун хақни, иш тугаллангандан ва текширилгандан сўнг туланади "}</p>
+            <section className='banner-section'>
+                <div className='top'>
+                    <img src={logoIcon}></img>
+                </div>
+                <div className='bottom'>
+                    <div className='frame'>
+                        <div className='frame-top'>
+                            <p>СДЕЛАЕМ  КАЧЕСТВЕННЫЙ И УЮТНЫЙ РЕМОНТ ВАШЕЙ КВАРТИРЫ "ПОД КЛЮЧ" В САНКТ ПЕТЕРБУРГЕ  ОТ 7900 Р/М2</p>
+                        </div>
+                        <div className='frame-bottom'>
+                            <div>
+                                <div className='img-container'>
+                                    <img src={moneyIcon}></img>
+                                </div>
+                                <div className='frame-text'>
+                                    <h3>{rus? "БЕЗ ПРЕДОПЛАТЫ": ""}</h3>
+                                    <p>Blablablablabalbalblablalba</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div className='img-container'>
+                                    <img src={moneyIcon}></img>
+                                </div>
+                                <div className='frame-text'>
+                                    <h3>{rus? "ГАРАНТИЯ 100%": ""}</h3>
+                                    <p>Blablablablabalbalablalba</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div className='img-container'>
+                                    <img src={moneyIcon}></img>
+                                </div>
+                                <div className='frame-text'>
+                                    <h3>{rus? "ТОЧНО В СРОК": ""}</h3>
+                                    <p>Blablablablabalbalblablalba</p>
+                                </div>
                             </div>
                         </div>
-                        <div>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Circle-icons-document.svg/2048px-Circle-icons-document.svg.png"></img>
-                            <div className='text'>
-                                <h3>{rus ? "ГАРАНТИЯ 100%": "100% Кафолат"}</h3>
-                                <p>
-                                    {rus ? "Фиксированная смета и официальный договор с гарантией в 1 год": "Смета бўйича келишилган нарх ва расмий шартнома орқали 1 йил кафалат"}
-                                </p>
-                            </div>
-                        </div>
-                        <div>
-                            <img src="https://www.pngrepo.com/png/191856/512/alarm-clock-clock.png"></img>
-                            <div className='text'>
-                                <h3>{rus? "ТОЧНО В СРОК": "Режа асосида ишни ўз вақтида топширамиз"}</h3>
-                                <p>{rus ? "Держим сроки или платим неустойку каждый день просрочки" : "Белгиланган муддатда ишни ўз эгасига топширамиз, кечиктирилган вақт иш учун жарима тулаймиз"}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="calc-link">
-                        <button onClick={(e) => navigate('/calc')}>Find out price</button>
                     </div>
                 </div>
             </section>
-
             <section className="risk-section">
                 <div className="top">
                     <h1>{rus ? "C ЧЕМ ВЫ МОЖЕТЕ СТОЛКНУТЬСЯ ПРИ ЗАКАЗЕ  РЕМОНТА КВАРТИРЫ?": "Квартирангизни таъмирлашга буюртма бераетганингизда бугунда ыуйидаги мусала ва муаммолар билан дуч келишингиз мумкин."}</h1>

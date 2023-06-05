@@ -77,7 +77,6 @@ export default function Header(){
         <>
         <header className="main-header">
             <div className="left-section">
-                <img src={logo} onClick={(e) => navigate('/')}></img>
                 <p>
                     { rus ? "Делаем качественный ремонт квартир 'под ключ', без предоплаты, c гарантией в договоре 1 год" : 
                     "Тошкентда квартиларни сифатли таъмирлаш хизмати, 1 йил кафолат билан." }</p>
