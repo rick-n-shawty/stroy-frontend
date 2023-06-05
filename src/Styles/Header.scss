@@ -5,7 +5,7 @@
     width: 100%;
     position: relative;
     padding: .5rem;
-    flex-direction: row;
+    justify-content: space-between;
     padding-left: 5rem;
     padding-right: 5rem;
     color: black;
@@ -150,36 +150,32 @@
         display: flex;
         overflow: hidden;
         height: 100%;
-        width: 50%;
+        width: 30%;
         align-items: center;
         justify-content: center;
         padding: 1rem;
-        img{
-            object-fit: contain;
-            height: 160%;
-        }
         p{
-            width: 80%;
-            font-size: .9rem;
-            word-break: break-all;
+            width: 100%;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: green;
+            word-break: normal;
             margin-left: .5rem;
         }
     }
     .right-section{
-        width: 50%;
+        width: 70%;
         overflow: hidden;
         padding: 1rem;
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
+        justify-content: space-around;
         button {
           cursor: pointer;
           background-color: rgb(92, 181, 92);
           border: none;
           border-radius: 5px;
           text-align: center;
-          padding: 0;
           color: white;
           padding: 1rem;
         }
@@ -218,48 +214,61 @@
             }
               
     }
-    @media (max-width: 1000px) {
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }
-    @media (max-width: 900px) {
-        padding-left: 3rem;
-        padding-right: 3rem;
+    @media (max-width: 1100px) {
+        padding-left: 2rem;
+        padding-right: 2rem;
         .left-section{
-            img{
-                height: 130%;
-            }
             p{
-                font-size: .8rem;
+                font-size: 1rem;
+            }
+        }
+    }
+    @media (max-width: 1000px) {
+        .right-section{
+            button{
+                padding: .8rem;
+            }
+        }
+    }
+        
+    @media (max-width: 900px) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        .left-section{
+            p{
+                font-size: .9rem;
             }
         }
         .right-section{
             button{
-                padding: .7rem 1.7rem;
-                font-size: .8rem;
+                padding: 1.2rem 1.6rem;
+                font-size: .7rem;
                 margin: .5rem
             }
         }
     }
     @media (max-width: 830px) {
-        padding-left: 2rem;
-        padding-right: 2rem;
         .right-section{
             button{
-                padding: .5rem;
-                font-size: .7rem;
-                font-weight: 500;
-                margin: .5rem
+                padding: 1rem 1.6rem;
             }
         }
     }
     @media (max-width: 750px) {
         .left-section{
-            img{
-                height: 120%;
-            }
+            padding: 0;
+            width: 40%;
             p{
-                font-size: .7rem;
+                font-size: .9rem;
+            }
+        }
+        .right-section{
+            width: 60%;
+            padding: 0;
+            button{
+                font-size: .5rem;
+                font-weight: 700;
+                padding: .5rem 1.6rem;
             }
         }
     }
@@ -272,32 +281,35 @@
         .left-section{
             height: 70%;
             width: 100%;
-            img{
-                height: 180%;
-                object-fit: contain;
-            }
             p{
-                width: 50%;
-                font-size: .8rem;
+                width: 80%;
+                font-size: 1.1rem;
             }
         }
         .right-section{
             height: 30%;
             width: 100%;
             button{
-                padding: 2rem;
+                padding: 1rem;
+                font-size: 1rem;
             }
         }
     }
-    @media (max-width: 450px) {
+    @media (max-width: 600px) {
+        .right-section{
+            button{
+                font-size: .8rem;
+                padding: .9rem;
+            }
+        }
+    }
+        
+    @media (max-width: 500px) {
         padding-left: 0rem;
         padding-right: 0rem;
         .left-section{
-            img{
-                height: 190%;
-            }
             p{
-                font-size: .6rem;
+                font-size: .9rem;
             }
         }
         .right-section{
@@ -305,8 +317,8 @@
             align-items: center;
             padding: 1rem;
             button{
-                padding: 1rem;
-                font-size: .5rem
+                padding: .5rem;
+                font-size: .7rem
             }
             
             select{

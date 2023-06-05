@@ -224,6 +224,7 @@ body {
   color: white;
   width: 100%;
   padding: 1rem;
+  align-items: center;
 }
 .main-section .review-section .top h1 {
   margin-bottom: 0;
