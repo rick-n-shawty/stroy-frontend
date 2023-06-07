@@ -51,14 +51,14 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-  min-height: 100vh;
+  min-height: 120vh;
   position: relative;
 }
 .main-section .banner-section .top {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("https://thumbs.dreamstime.com/b/building-tools-dark-wooden-table-top-view-flat-lay-copy-space-188680645.jpg");
+  background-image: url("../Images/tools-bg.jpg");
   background-size: cover;
   max-height: 100%;
   max-width: 100%;
@@ -69,22 +69,23 @@ body {
 .main-section .banner-section .top img {
   -o-object-fit: contain;
      object-fit: contain;
-  max-height: 10rem;
+  max-height: 22rem;
+  margin: 0;
 }
 .main-section .banner-section .bottom {
   flex: 1;
   display: flex;
   position: relative;
-  background-color: gray;
+  background-color: rgb(98, 98, 98);
   justify-content: center;
 }
 .main-section .banner-section .bottom .frame {
   display: flex;
-  border: green solid 7px;
-  top: -35%;
+  border: rgb(0, 180, 30) solid 7px;
+  top: -60%;
   border-radius: 14px;
   padding: 1rem;
-  width: 60%;
+  width: 50%;
   height: 130%;
   flex-direction: column;
   position: absolute;
@@ -95,9 +96,15 @@ body {
   height: 30%;
 }
 .main-section .banner-section .bottom .frame .frame-top p {
+  font-size: 1.2rem;
+  font-weight: 600;
   flex-wrap: wrap;
-  word-wrap: break-word;
+  word-wrap: normal;
   margin: 0;
+}
+.main-section .banner-section .bottom .frame .frame-top .green-highlight {
+  background-color: green;
+  color: white;
 }
 .main-section .banner-section .bottom .frame .frame-bottom {
   display: flex;
@@ -141,6 +148,77 @@ body {
   margin: 0;
   word-wrap: break-word;
   flex-wrap: wrap;
+}
+@media (max-width: 1220px) {
+  .main-section .banner-section .bottom .frame {
+    width: 60%;
+  }
+}
+@media (max-width: 1050px) {
+  .main-section .banner-section .bottom .frame {
+    width: 70%;
+  }
+}
+@media (max-width: 950px) {
+  .main-section .banner-section .bottom .frame .frame-top p {
+    font-size: 0.9rem;
+  }
+  .main-section .banner-section .bottom .frame .frame-bottom div .frame-text h3 {
+    font-size: 1rem;
+  }
+  .main-section .banner-section .bottom .frame .frame-bottom div .frame-text p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 800px) {
+  .main-section .banner-section .bottom .frame {
+    width: 80%;
+  }
+}
+@media (max-width: 700px) {
+  .main-section .banner-section .bottom .frame {
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  .main-section .banner-section .bottom .frame {
+    width: 95%;
+  }
+  .main-section .banner-section .bottom .frame .frame-bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .main-section .banner-section .bottom .frame .frame-bottom div {
+    flex-direction: row;
+    height: 30%;
+  }
+  .main-section .banner-section .bottom .frame .frame-bottom div .img-container {
+    max-width: 25%;
+    height: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .main-section .banner-section .bottom .frame .frame-top p {
+    font-size: 0.85rem;
+  }
+  .main-section .banner-section .bottom .frame .frame-bottom div {
+    gap: 0.5rem;
+  }
+  .main-section .banner-section .bottom .frame .frame-bottom div .frame-text {
+    width: 75%;
+    gap: 0;
+  }
+  .main-section .banner-section .bottom .frame .frame-bottom div .frame-text h3 {
+    font-size: 0.8rem;
+  }
+  .main-section .banner-section .bottom .frame .frame-bottom div .frame-text p {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 550px) {
+  .main-section .banner-section .top img {
+    height: 15rem;
+  }
 }
 .main-section .risk-section {
   display: flex;

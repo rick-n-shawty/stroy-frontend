@@ -6,9 +6,10 @@ import EmployeeCard from './EmployeeCard';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import closeIcon from '../Images/close-icon.svg'
-import logoIcon from '../Images/Ecostroy.jpg'
-import moneyIcon from '../Images/salary.png';
-
+import logoIcon from '../Images/Ecostroy.png'
+import moneyIcon from '../Images/moneyIcon.png';
+import paperIcon from '../Images/paperIcon.png'; 
+import calendarIcon from '../Images/calendarIcon.png'; 
 import {Swiper, SwiperSlide} from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import "swiper/swiper-bundle.min.css";
@@ -92,7 +93,14 @@ export default function Main(){
                 <div className='bottom'>
                     <div className='frame'>
                         <div className='frame-top'>
-                            <p>СДЕЛАЕМ  КАЧЕСТВЕННЫЙ И УЮТНЫЙ РЕМОНТ ВАШЕЙ КВАРТИРЫ "ПОД КЛЮЧ" В САНКТ ПЕТЕРБУРГЕ  ОТ 7900 Р/М2</p>
+                            <p>{rus? 
+                            <span>
+                                Мы предоставляем <span className='green-highlight'>качественные и доступные услуги</span> по ремонту вашей квартиры в Ташкенте. На сегодняшний день у нас работает профессиональная команда с 3-х летним опытом, сдавшая более <span className='green-highlight'>100 объектов</span> их владельцам. Вы можете доверять нам!
+                            </span>: 
+                            <span>
+                                Тошкент шаҳрида Сизниг квартирангизни сифатли ва хамёнбоб таъмирлаш ҳизматларини амалга оширамиз. Бугунги кунга келиб 100 дан ортиқ объектларни ўз эгаларига топшириб, 3 йиллик тажрибага эга профессионал командага эгамиз. Бизга ишонсангиз бўлади!
+                            </span>}
+                            </p>
                         </div>
                         <div className='frame-bottom'>
                             <div>
@@ -101,25 +109,25 @@ export default function Main(){
                                 </div>
                                 <div className='frame-text'>
                                     <h3>{rus? "БЕЗ ПРЕДОПЛАТЫ": ""}</h3>
-                                    <p>Blablablablabalbalblablalba</p>
+                                    <p>{rus? "Оплачивайте работу только после выполнения и проверки качества": "Ишни амалга оширилганлиги учун хақни, иш тугаллангандан ва текширилгандан сўнг туланади"}</p>
                                 </div>
                             </div>
                             <div>
                                 <div className='img-container'>
-                                    <img src={moneyIcon}></img>
+                                    <img src={paperIcon}></img>
                                 </div>
                                 <div className='frame-text'>
                                     <h3>{rus? "ГАРАНТИЯ 100%": ""}</h3>
-                                    <p>Blablablablabalbalablalba</p>
+                                    <p>{rus ? "Фиксированная смета и официальный договор с гарантией 1 лет" : "Смета бўйича келишилган нарх ва расмий шартнома орқали 1 йил кафалат "}</p>
                                 </div>
                             </div>
                             <div>
                                 <div className='img-container'>
-                                    <img src={moneyIcon}></img>
+                                    <img src={calendarIcon}></img>
                                 </div>
                                 <div className='frame-text'>
                                     <h3>{rus? "ТОЧНО В СРОК": ""}</h3>
-                                    <p>Blablablablabalbalblablalba</p>
+                                    <p>{rus? "Держим сроки или платим неустойку каждый день просрочки": "Белгиланган муддатда ишни ўз эгасига топширамиз, кечиктирилган вақт иш учун жарима тулаймиз"}</p>
                                 </div>
                             </div>
                         </div>

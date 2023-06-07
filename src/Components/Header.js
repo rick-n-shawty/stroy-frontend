@@ -2,7 +2,6 @@ import axios from "axios";
 import { LanguageContext } from "../App";
 import { useContext, useState } from 'react';
 import closeIcon from '../Images/close-icon.svg';
-import logo from '../Images/Ecostroy.jpg';
 import { useNavigate } from "react-router-dom";
 export default function Header(){
     const [rus, setRus] = useContext(LanguageContext)

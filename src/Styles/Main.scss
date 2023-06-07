@@ -47,13 +47,13 @@ body{
         display: grid;
         grid-template-columns: 1fr;
         width: 100%;
-        min-height: 100vh;
+        min-height: 120vh;
         position: relative;
         .top{
             display: flex;
             justify-content: center;
             align-items: center;            
-            background-image: url('https://thumbs.dreamstime.com/b/building-tools-dark-wooden-table-top-view-flat-lay-copy-space-188680645.jpg');
+            background-image: url('../Images/tools-bg.jpg');
             background-size: cover;
             max-height: 100%;
             max-width: 100%;
@@ -62,22 +62,23 @@ body{
             flex: 1;
             img{
                 object-fit: contain;
-                max-height: 10rem;
+                max-height: 22rem;
+                margin: 0;
             }
         }
         .bottom{
             flex: 1;
             display: flex;
             position: relative;
-            background-color: gray;
+            background-color: rgb(98, 98, 98);
             justify-content: center;
             .frame{
                 display: flex;
-                border: green solid 7px;
-                top: -35%;
+                border: rgb(0,180,30) solid 7px;
+                top: -60%;
                 border-radius: 14px;
                 padding: 1rem;
-                width: 60%;
+                width: 50%;
                 height: 130%;
                 flex-direction: column;
                 position: absolute;
@@ -86,9 +87,15 @@ body{
                     display: flex;
                     height: 30%;
                     p{
+                        font-size: 1.2rem;
+                        font-weight: 600;
                         flex-wrap: wrap;
-                        word-wrap: break-word;
+                        word-wrap: normal;
                         margin: 0;
+                    }
+                    .green-highlight{
+                        background-color: green;
+                        color: white;
                     }
                 }
                 .frame-bottom{
@@ -133,7 +140,82 @@ body{
                         }
                     }
                 }
+                @media (max-width: 1220px) {
+                    width: 60%;
+                }
+                @media (max-width: 1050px) {
+                    width: 70%;
+                }
+                @media (max-width: 950px) {
+                    .frame-top{
+                        p{
+                            font-size: .9rem;
+                        }
+                    }   
+                    .frame-bottom{
+                        div{
+                            .frame-text{
+                                h3{
+                                    font-size: 1rem;
+                                }
+                                p{
+                                    font-size: .9rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 800px) {
+                    width: 80%;
+                }
+                @media (max-width: 700px) {
+                    width: 90%;
+                }
+                @media (max-width: 600px) {
+                    width: 95%;
+                    .frame-bottom{
+                        flex-direction: column;
+                        gap: .5rem;
+                        div{
+                            flex-direction: row;
+                            height: 30%;
+                            .img-container{
+                                max-width: 25%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 500px) {
+                    .frame-top{
+                        p{
+                            font-size: .85rem;
+                        }
+                    }
+                    .frame-bottom{
+                        div{
+                            gap: .5rem;
+                            .frame-text{
+                                width: 75%;
+                                gap: 0;
+                                h3{
+                                    font-size: .8rem;
+                                }
+                                p{
+                                    font-size: .8rem;
+                                }
+                            }   
+                        }
+                    }
+                }
 
+            }
+        }
+        @media (max-width: 550px) {
+            .top{
+                img{
+                    height: 15rem;
+                }
             }
         }
     }
