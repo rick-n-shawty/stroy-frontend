@@ -202,7 +202,7 @@ body {
     font-size: 0.85rem;
   }
   .main-section .banner-section .bottom .frame .frame-bottom div {
-    gap: 0.5rem;
+    gap: 1.2rem;
   }
   .main-section .banner-section .bottom .frame .frame-bottom div .frame-text {
     width: 75%;
@@ -213,6 +213,11 @@ body {
   }
   .main-section .banner-section .bottom .frame .frame-bottom div .frame-text p {
     font-size: 0.8rem;
+  }
+}
+@media (max-width: 500px) {
+  .main-section .banner-section {
+    min-height: 110vh;
   }
 }
 @media (max-width: 550px) {

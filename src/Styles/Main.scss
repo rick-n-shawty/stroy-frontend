@@ -187,6 +187,7 @@ body{
                     }
                 }
                 @media (max-width: 500px) {
+
                     .frame-top{
                         p{
                             font-size: .85rem;
@@ -194,7 +195,7 @@ body{
                     }
                     .frame-bottom{
                         div{
-                            gap: .5rem;
+                            gap: 1.2rem;
                             .frame-text{
                                 width: 75%;
                                 gap: 0;
@@ -210,6 +211,9 @@ body{
                 }
 
             }
+        }
+        @media (max-width: 500px) {
+            min-height: 110vh;
         }
         @media (max-width: 550px) {
             .top{
