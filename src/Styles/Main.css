@@ -215,6 +215,49 @@ body {
     font-size: 0.8rem;
   }
 }
+@media (max-width: 400px) {
+  .main-section .banner-section .bottom .frame {
+    height: 210%;
+    top: -80%;
+  }
+  .main-section .banner-section .bottom .frame .frame-bottom {
+    justify-content: space-between;
+  }
+  .main-section .banner-section .bottom .frame .frame-bottom div .img-container {
+    min-width: 40%;
+    max-width: 40%;
+  }
+  .main-section .banner-section .bottom .frame .frame-bottom div .img-container img {
+    width: 100%;
+  }
+  .main-section .banner-section .bottom .frame .frame-bottom div .frame-text {
+    min-width: 60%;
+  }
+}
+@media (max-width: 330px) {
+  .main-section .banner-section .bottom .frame {
+    height: 150%;
+    width: 90%;
+  }
+  .main-section .banner-section .bottom .frame .frame-top p {
+    font-size: 0.8rem;
+  }
+  .main-section .banner-section .bottom .frame .frame-bottom div .img-container {
+    min-width: 35%;
+  }
+  .main-section .banner-section .bottom .frame .frame-bottom div .img-container img {
+    width: 100%;
+  }
+  .main-section .banner-section .bottom .frame .frame-bottom div .frame-text {
+    min-width: 65%;
+  }
+  .main-section .banner-section .bottom .frame .frame-bottom div .frame-text h3 {
+    font-size: 0.7rem;
+  }
+  .main-section .banner-section .bottom .frame .frame-bottom div .frame-text p {
+    font-size: 0.7rem;
+  }
+}
 @media (max-width: 500px) {
   .main-section .banner-section {
     min-height: 110vh;

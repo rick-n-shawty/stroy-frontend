@@ -209,6 +209,53 @@ body{
                         }
                     }
                 }
+                @media (max-width: 400px) {
+                    height: 210%;
+                    top: -80%;
+                    .frame-bottom{
+                        justify-content: space-between;
+                        div{
+                            .img-container{
+                                min-width: 40%;
+                                max-width: 40%;
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                            .frame-text{
+                                min-width: 60%;
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 330px) {
+                    height: 150%;
+                    width: 90%;
+                    .frame-top{
+                        p{
+                            font-size: .8rem;
+                        }
+                    }
+                    .frame-bottom{
+                        div{
+                            .img-container{
+                                min-width: 35%;
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                            .frame-text{
+                                min-width: 65%;
+                                h3{
+                                    font-size: .7rem;
+                                }
+                                p{
+                                    font-size: .7rem;
+                                }
+                            }
+                        }
+                    }
+                }
 
             }
         }
