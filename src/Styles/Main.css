@@ -94,6 +94,7 @@ body {
   flex-direction: column;
   position: absolute;
   background-color: white;
+  gap: 0.8rem;
 }
 .main-section .banner-section .bottom .frame .frame-top {
   display: flex;
