@@ -24,6 +24,7 @@ export default function Main(){
     const [isHidden, setIsHidden] = useState(true)
     const [name, setName] = useState('')
     const [phoneNumber, setPhoneNumber] = useState('')
+    const [portfolio, setPortfolio] = useState()
     useEffect(() => {
         const fetchData = async () => {
             try{
@@ -42,7 +43,6 @@ export default function Main(){
                 })
                 const workerRes = await axios.get('/employee')
                 const workersArr = await workerRes.data.employees
-                console.log(workersArr)
                 const workerCards = workersArr.map(item => {
                     return <EmployeeCard 
                     key={item._id} 
@@ -55,8 +55,25 @@ export default function Main(){
                     descUz = {item.descriptionUz}
                     />
                 })
+                const portfolioRes = await axios.get('/portfolio', {headers: {"Content-Type": "application/json"}}) 
+                const portfolios = await portfolioRes.data.portfolios 
+                console.log(portfolios)
+                const portfolioArr = portfolios.map(item => {
+                    return <SwiperSlide>
+                        <PortfolioCard 
+                        key={item._id} 
+                        pictures={item.pictures} 
+                        space={item.space} 
+                        price={item.price}
+                        titleRu={item.titleRu}
+                        titleUz={item.titleUz}
+                        descRu={item.descRu}
+                        descUz={item.descUz}
+                        />
+                    </SwiperSlide>
+                })
+                setPortfolio(portfolioArr)
                 setWorkers(workerCards)
-                console.log(workersArr)
                 setVideos(arr)
             }catch(err){
                 console.log(err)
@@ -257,12 +274,7 @@ export default function Main(){
                         navigation
                         onSlideChange={() => console.log('slide change')}
                         onSwiper={(swiper) => console.log(swiper)}>
-                        <SwiperSlide>
-                            <PortfolioCard/>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <PortfolioCard/>
-                        </SwiperSlide>
+                            {portfolio}
                     </Swiper>
                 </div>
             </section>

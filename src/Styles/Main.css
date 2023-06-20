@@ -600,12 +600,12 @@ body {
 }
 .main-section .portfolio-section .bottom .portfolio-card .image-container .sub-images div {
   display: flex;
-  flex: 1 1 auto;
+  flex: 1 1;
 }
 .main-section .portfolio-section .bottom .portfolio-card .image-container .sub-images div img {
   -o-object-fit: cover;
      object-fit: cover;
-  max-height: 100%;
+  height: auto;
   max-width: 100%;
   border-radius: 8px;
 }
