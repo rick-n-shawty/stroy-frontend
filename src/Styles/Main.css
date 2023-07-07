@@ -53,12 +53,12 @@ body {
   width: 100%;
   min-height: 120vh;
   position: relative;
+  background-image: url("../Images/tools-bg.jpg");
 }
 .main-section .banner-section .top {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../Images/tools-bg.jpg");
   background-size: cover;
   max-height: 100%;
   max-width: 100%;
@@ -80,7 +80,6 @@ body {
   flex: 1;
   display: flex;
   position: relative;
-  background-color: #373737;
   justify-content: center;
 }
 .main-section .banner-section .bottom .frame {
